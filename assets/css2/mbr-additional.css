@@ -1662,7 +1662,7 @@ a {
 }
 
 .cid-ubtvYa9IJk {
-    overscroll-behavior: none;
+    overscroll-behavior: auto;
     padding-top: 5rem;
     padding-bottom: 5rem;
     background-color: #7E7D6E;
@@ -1704,7 +1704,7 @@ a {
 }
 
 .cid-ubtvYa9IJk .row {
-    align-items: center;
+    align-items: stretch;
     margin-right: -1rem;
     margin-left: -1rem;
 }
