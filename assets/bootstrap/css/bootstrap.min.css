@@ -513,10 +513,11 @@ progress {
 }
 
 .display-3 {
-    font-size: calc(1.525rem + 3.3vw);
+    font-size: calc(1.5rem + 3.0vw);
     font-weight: 300;
     line-height: 1.2
 }
+
 
 @media (min-width:1200px) {
     .display-3 {

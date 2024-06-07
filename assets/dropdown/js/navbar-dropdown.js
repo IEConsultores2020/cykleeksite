@@ -46,3 +46,7 @@
         }))
     }))
 }();
+
+!(function () {
+    !('.selectpicker').selectpicker();
+});

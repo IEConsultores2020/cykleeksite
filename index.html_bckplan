@@ -4,16 +4,13 @@
 <head>
     <!-- Site made with Mobirise Online Website Builder v5.9.13, https://a.mobirise.com and modified by IEConsultores -->
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
-    <title data-i18n="title"></title>
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta http-equiv="Content-Security-Policy" content="
     default-src 'self';
     script-src 'self' 'unsafe-inline' 'unsafe-eval' https://www.youtube.com;
     style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://r.mobirisesite.com;
-    img-src 'self' https://img.youtube.com/vi/gcE7gTicXvk/maxresdefault.jpg data:;;
+    img-src 'self' data:;
     font-src 'self' https://fonts.gstatic.com https://r.mobirisesite.com;
-    media-src 'self'  https://fonts.gstatic.com https://r.mobirisesite.com;
     frame-src https://www.youtube.com;
     object-src 'none';
     base-uri 'self';
@@ -21,7 +18,12 @@
     upgrade-insecure-requests;
   ">
     <meta name="generator" content="Mobirise v5.9.13, a.mobirise.com">
-    <link rel="stylesheet" href="./assets/css/style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
+    <style>
+        .language {
+            display: none;
+        }
+    </style>
     <!-- Content Security Policy Meta Tag -->
 
     <link rel="shortcut icon" href="assets/images/cykleek.ico.ico" type="image/x-icon">
@@ -68,11 +70,13 @@
                         </a>
                     </span>
                     <span class="navbar-caption-wrap text-black display-4">
-                        <ul>
-                            <li><a href="index.html" onclick="changeLanguage('en')">English</a></li>
-                            <li><a href="index.html" onclick="changeLanguage('es')">Español</a></li>
-                            <li><a href="index.html" onclick="changeLanguage('tr')">Türkiye</a></li>
-                        </ul>
+                        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                            <select id="language-select" onchange="changeLanguage()">
+                                <option value="en">English</option>
+                                <option value="es">Español</option>
+                                <option value="tr">Türkiye</option>
+                            </select>
+                        </div>
                     </span>
                     <span class="navbar-caption-wrap"><a class="navbar-caption text-black display-4"
                             href="http://www.cykleek.com">Under Construction.. </a>
@@ -105,59 +109,139 @@
                         <span></span>
                     </div>
                 </button>
-                <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                    <ul class="navbar-nav nav-dropdown" data-app-modern-menu="true">
-                        <li class="nav-item">
-                            <a class="nav-link link text-black  display-4" href="#Commitment">
-                                <p data-i18n="OurCommitment"></p>
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link link text-black display-4" href="#howdoesitworks" aria-expanded="false">
-                                <p data-i18n="HowDoesItWork"></p>
-                            </a>
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link link text-black display-4" href="#getinvolved" aria-expanded="false">
-                                <p data-i18n="GetInvolved"></p>
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link link text-black display-4" href="#whyco2" aria-expanded="false">
-                                <p data-i18n="WhyCO2.."></p>
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link link text-black display-4" href="#antigreenwashing"
-                                aria-expanded="false">
-                                <p data-i18n="AntiGreenwashing.."></p>
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link link text-black display-4" href="#shorstoryofthers"
-                                aria-expanded="false">
-                                <p data-i18n="..StoryoftheRs"></p>
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link link text-black display-4" href="#commingup" aria-expanded="false">
-                                <p data-i18n="..Campaigns"></p>
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link link text-black display-4" href="#FAQ">
-                                <p data-i18n="FAQs"></p>
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link link text-black display-4" href="#joinus">
-                                <p data-i18n="Join us"></p>
-                            </a>
-                        </li>
-                    </ul>
-                    <div class="navbar-buttons mbr-section-btn">
-                        <a class="btn btn-primary display-4" href="http://cykleek.com:3000/">Go to App</a>
+
+                <div id="english-content" class="language">
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <ul class="navbar-nav nav-dropdown" data-app-modern-menu="true">
+                            <li class="nav-item">
+                                <a class="nav-link link text-black  display-4" href="#Commitment">Our Commitment</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link link text-black display-4" href="#howdoesitworks"
+                                    aria-expanded="false">How Does it Work?</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link link text-black display-4" href="#getinvolved"
+                                    aria-expanded="false">Get
+                                    involved</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link link text-black display-4" href="#whyco2" aria-expanded="false">Why
+                                    CO2..</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link link text-black display-4" href="#antigreenwashing"
+                                    aria-expanded="false">Anti Greenwashing..</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link link text-black display-4" href="#shorstoryofthers"
+                                    aria-expanded="false">..Story of the Rs</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link link text-black display-4" href="#commingup"
+                                    aria-expanded="false">..Campaigns</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link link text-black display-4" href="#FAQ">FAQs</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link link text-black display-4" href="#joinus">Join us</a>
+                            </li>
+                        </ul>
+
+                        <div class="navbar-buttons mbr-section-btn">
+                            <a class="btn btn-primary display-4" href="http://cykleek.com:3000/?locale=en"> Go to
+                                App</a>
+                        </div>
+                    </div>
+                </div>
+                <div id="spanish-content" class="language">
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <ul class="navbar-nav nav-dropdown" data-app-modern-menu="true">
+                            <li class="nav-item">
+                                <a class="nav-link link text-black  display-4" href="#Commitment">NuestroCompromiso</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link link text-black display-4" href="#howdoesitworks"
+                                    aria-expanded="false">Como Funciona?</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link link text-black display-4" href="#getinvolved"
+                                    aria-expanded="false">Participe</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link link text-black display-4" href="#whyco2" aria-expanded="false">Por
+                                    que
+                                    CO2..</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link link text-black display-4" href="#antigreenwashing"
+                                    aria-expanded="false">Anti..imagen verde</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link link text-black display-4" href="#shorstoryofthers"
+                                    aria-expanded="false">..Historia..Rs</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link link text-black display-4" href="#commingup"
+                                    aria-expanded="false">..Campañas</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link link text-black display-4" href="#FAQ">P&Rs</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link link text-black display-4" href="#joinus">Unete..</a>
+                            </li>
+                        </ul>
+
+                        <div class="navbar-buttons mbr-section-btn">
+                            <a class="btn btn-primary display-4" href="http://cykleek.com:3000/?locale=es">Ir a App</a>
+                        </div>
+                    </div>
+                </div>
+                <div id="turkey-content" class="language">
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <ul class="navbar-nav nav-dropdown" data-app-modern-menu="true">
+                            <li class="nav-item">
+                                <a class="nav-link link text-black  display-4" href="#Commitment_tr">Taahhüdümüz</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link link text-black display-4" href="#howdoesitworks"
+                                    aria-expanded="false">O nasıl çalışır?</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link link text-black display-4" href="#getinvolved"
+                                    aria-expanded="false">Katılın</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link link text-black display-4" href="#whyco2" aria-expanded="false">Neden
+                                    CO2..?</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link link text-black display-4" href="#antigreenwashing"
+                                    aria-expanded="false">
+                                    Yeşil yıkama karşıtı</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link link text-black display-4" href="#shorstoryofthers"
+                                    aria-expanded="false">.. R'lerin Hikayesi</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link link text-black display-4" href="#commingup" aria-expanded="false">..
+                                    Kampanyalar</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link link text-black display-4" href="#FAQ">SSS</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link link text-black display-4" href="#joinus">Bize katılın</a>
+                            </li>
+                        </ul>
+
+                        <div class="navbar-buttons mbr-section-btn">
+                            <a class="btn btn-primary display-4" href="http://cykleek.com:3000/?locale=es">Uygulamaya
+                                Gittim</a>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -165,26 +249,24 @@
     </section>
 
     <section data-bs-version="5.1" class="header18 cid-ubtvYa9bdK mbr-fullscreen"
-        data-bg-video="https://www.youtube.com/embed/gcE7gTicXvk?autoplay=1&amp;loop=1&amp;playlist=gcE7gTicXvk&amp;t=20&amp;mute=1&amp;playsinline=1&amp;controls=0&amp;showinfo=0&amp;autohide=1&amp;allowfullscreen=true&amp;mode=transparent"
+        data-bg-video="https://www.youtube.com/embed/gcE7gTicXvk?autoplay=1&;loop=1&;playlist=gcE7gTicXvk&;t=20&;mute=1&;playsinline=1&;controls=0&;showinfo=0&;autohide=1&;allowfullscreen=true&;mode=transparent"
         id="hero-15-ubtvYa9bdK">
         <div class="mbr-overlay" style="opacity: 0.5; background-color: rgb(0, 0, 0);"></div>
         <div class="container-fluid">
             <div class="row">
                 <div class="content-wrap col-12 col-md-12">
                     <h1 class="mbr-section-title mbr-fonts-style mbr-white mb-4 display-1">
-                        <strong>
-                            <p data-i18n="RevolutionizeWaste"></p>
-                        </strong>
+                        <strong>Revolutionize Waste</strong>
                     </h1>
-                    <p class="mbr-fonts-style mbr-text mbr-white mb-4 display-7" data-i18n="JoinCYKLEEKtoRedefineWaste">
-                    </p>
+                    <p class="mbr-fonts-style mbr-text mbr-white mb-4 display-7">Join CYKLEEK to Redefine Waste and
+                        Save Our Planet from the Throwaway Consumption Culture!</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <section data-bs-version="5.1" class="article05 cid-ubtvYa9IJk" id="Commitment">
 
+    <section data-bs-version="5.1" class="article05 cid-ubtvYa9IJk" id="Commitment">
         <div class="container">
             <div class="row justify-content-center align-items-center vertical-align: top;">
                 <div class="col-12">
@@ -193,16 +275,25 @@
                             <div class="col-12 col-md-12 col-lg-5 image-wrapper">
                                 <img class="w-100" src="assets/images/Falls4.jpg" alt="Cykleek commitment">
                             </div>
+
                             <div class="col-15 col-lg col-md-12">
+
                                 <div class="text-wrapper align-left overscroll-behavior: auto;">
                                     <h1 id="TitleCommitment" class="mbr-section-title mbr-fonts-style mb-4 display-2">
-                                        <strong>
-                                            <p data-i18n="OurCommitment"></p>
-                                        </strong>
+                                        <strong>Our commitment </strong>
                                     </h1>
-                                    <p class="mbr-text mbr-fonts-style mb-3 display-7"
-                                        data-i18n="OurCommitmentCykleekhas">
-                                        <span id="dotsCommitment">...</span><span id="moreCommitment">
+                                    <p class="mbr-text mbr-fonts-style mb-3 display-7">Cykleek has no doubt that a
+                                        positive change is possible and firmly believes that All of us can take
+                                        active
+                                        part of it. We aim to redefine what is considered waste and facilitate
+                                        connections between persons, public and private organizations or companies
+                                        that
+                                        want to be part of alternatives to traditional linear models of the
+                                        Throwaway
+                                        Consumption Culture that goes against natural laws and equally threatens all
+                                        of
+                                        us and our Planet Earth as a Unity. <span id="dotsCommitment">...</span><span
+                                            id="moreCommitment">
                                             <br>
                                             <?xml version="1.0" encoding="utf-8"?><svg
                                                 xmlns="http://www.w3.org/2000/svg" fill="none" width="32px"
@@ -211,16 +302,30 @@
                                                 <path stroke-linecap="round" stroke-linejoin="round"
                                                     d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3" />
                                             </svg>
-                                            <br>
-                                            <p class="mbr-text mbr-fonts-style mb-3 display-7"
-                                                data-i18n="OurCommitmentandeffective">
+                                            <br>To influence a true impact, isolated efforts
+                                            are not sufficient so we are here to accelerate possibilities of closing
+                                            waste
+                                            loops where synergies for to a better Planet can spread and grow fast
+                                            with
+                                            Your
+                                            contribution
+                                            Our VISION is to minimize or totally avoid the amount of waste reaching
+                                            landfill
+                                            or other unsustainable waste management practices, preserving materials
+                                            or
+                                            extending their lifespan with different alternatives. More than a
+                                            Platform
+                                            to
+                                            manage waste, Cykleek is also meeting point to join forces and create
+                                            awareness
+                                            that solutions, as the problems we deal with, can be similarly massive
+                                            and
+                                            effective.
                                         </span>
                                     </p>
                                     <button
                                         onclick="readmoreText('Commitment','dotsCommitment','moreCommitment','BtnCommitment')"
-                                        id="BtnCommitment">
-                                        <p data-i18n="Readmore"></p>
-                                    </button>
+                                        id="BtnCommitment">Read more</button>
                                     <p class="mbr-text mbr-fonts-style display-7"></p>
 
                                 </div>
@@ -232,6 +337,7 @@
         </div>
     </section>
 
+
     <section data-bs-version="5.1" class="article05 cid-ubtvYa9IJk" id="howdoesitworks">
         <div class="container">
             <div class="row justify-content-center align-items-top">
@@ -241,28 +347,46 @@
                             <div class="col-12 col-lg col-md-12">
                                 <div class="text-wrapper align-right">
                                     <h1 id="Titlehowdoesitworks"
-                                        class="mbr-section-title mbr-fonts-style mb-4 display-3">
-                                        <strong>
-                                            <p data-i18n="HowDoesItWork"></p>
-                                        </strong>
+                                        class="mbr-section-title mbr-fonts-style mb-4 display-2">
+                                        <strong>How does it work?</strong>
                                     </h1>
-                                    <p class="mbr-text mbr-fonts-style mb-3 display-7"
-                                        data-i18n="HowDoesItWorkCykleekIs"> <span
+                                    <p class="mbr-text mbr-fonts-style mb-3 display-7">Cykleek is a user-friendly
+                                        platform (website, app) created to assist You with the best options to manage
+                                        waste and second-hand materials connecting with other interested parts to sell,
+                                        buy, donate, exchange, pay or get paid for the transport, partial or total
+                                        treatment/disposal of materials generated at your point. Once registered, you
+                                        can see other users’ locations interested in the materials you want to trade,
+                                        donate or the services you offer or demand (transport, treatment). It is not
+                                        meant to replace regular waste collection service providers, just to
+                                        complement and enhance waste management, reduce it or totally avoid it. <span
                                             id="dotshowdoesitworks">...</span><span id="morehowdoesitworks"><br>
                                             <svg xmlns="http://www.w3.org/2000/svg" fill="none" width="32px"
                                                 height="32px" viewBox="0 0 24 24" stroke-width="1.5"
                                                 stroke="currentColor" class="w-6 h-6">
                                                 <path stroke-linecap="round" stroke-linejoin="round"
                                                     d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3" />
-                                            </svg><br>
-                                            <p class="mbr-text mbr-fonts-style mb-3 display-7"
-                                                data-i18n="HowdoesItWorkCykleekIsGreen">
+                                            </svg><br> Keep
+                                            in mind that, as stated in our <a href="terms_of_services.html"
+                                                target="_blank">Terms and Conditions</a>,
+                                            Cykleek is not
+                                            responsible for the implications of the agreement made between the parts
+                                            involved who should naturally follow the local environmental, transport or
+                                            any other related waste management rules & regulations. After you select the
+                                            option that best suits your needs and agree with the other part, fill out in
+                                            the
+                                            corresponding data -on quantities, type of materials, etc-, the equivalent
+                                            CO2 Emissions you avoided with your action are automatically generated and
+                                            accumulated in our green counter. Users who champion avoidance of Emissions
+                                            will be showcased and rewarded with tailor-made support to further improve
+                                            their materials consumption and waste management. Homes, Public, private or
+                                            Community based organizations, any kind of business, shops, factories,
+                                            restaurants, hotels as well as farms or other rural enterprises are welcome
+                                            to join and translate eventual losses or impacts of their activities into
+                                            tangible green opportunities.
                                         </span></p>
                                     <button
                                         onclick="readmoreText('howdoesitworks','dotshowdoesitworks','morehowdoesitworks','Btnhowdoesitworks')"
-                                        id="Btnhowdoesitworks">
-                                        <p data-i18n="Readmore"></p>
-                                    </button>
+                                        id="Btnhowdoesitworks">Read more</button>
                                 </div>
                             </div>
                             <div class="col-12 col-md-12 col-lg-5 image-wrapper">
@@ -288,94 +412,86 @@
                             <div class="col-12 col-lg col-md-12">
                                 <div class="text-wrapper align-left">
                                     <h1 id="Titlegetinvolved" class="mbr-section-title mbr-fonts-style mb-4 display-2">
-                                        <strong>
-                                            <p data-i18n="GetInvolvedInFourSteps"></p>
-                                        </strong>
+                                        <strong>Get Involved in four steps</strong>
                                     </h1>
-                                    <table style="width:100%">
-                                        <tr>
-                                            <td style="width:5%; vertical-align: top; text-align: left;">
-                                                <?xml version=" 1.0" encoding="iso-8859-1" ?>
-                                                <!-- Uploaded to: SVG Repo, www.svgrepo.com, Generator: SVG Repo Mixer Tools -->
-                                                <!DOCTYPE svg
-                                                    PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
-                                                <svg fill="#000000" height="24px" width="24px" version="1.1" id="Capa_1"
-                                                    xmlns="http://www.w3.org/2000/svg"
-                                                    xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 310 310"
-                                                    xml:space="preserve">
-                                                    <path
-                                                        d="M300.606,159.727l-45.333-45.333c-5.857-5.858-15.355-5.858-21.213,0L225,123.454V15c0-8.284-6.716-15-15-15H20
-            C11.716,0,5,6.716,5,15v240.002c0,8.284,6.716,15,15,15h85V295c0,8.284,6.716,15,15,15h45.333c3.979,0,7.794-1.581,10.607-4.394
-            l124.667-124.667C306.465,175.081,306.465,165.585,300.606,159.727z M35,30h160v123.454l-85.606,85.605
-            c-0.302,0.301-0.581,0.619-0.854,0.942H35V30z M159.12,280H135v-24.121l109.667-109.666l24.12,24.12L159.12,280z" />
-                                                </svg>
-                                            </td>
-                                            <td style="width:95%" class="mbr-text mbr-fonts-style mb-3 display-7"
-                                                data-i18n="GetInvolved1"></td>
-                                        </tr>
-                                        <tr>
-                                            <td style="width:5%; vertical-align: top; text-align: left;">
-                                                <?xml version="1.0" encoding="utf-8"?><!-- Uploaded to: SVG Repo, www.svgrepo.com, Generator: SVG Repo Mixer Tools -->
-                                                <svg width="36px" height="36px" viewBox="0 0 24 24" fill="none"
-                                                    xmlns="http://www.w3.org/2000/svg">
-                                                    <path
-                                                        d="M13 2C10.2386 2 8 4.23858 8 7C8 7.55228 8.44772 8 9 8C9.55228 8 10 7.55228 10 7C10 5.34315 11.3431 4 13 4H17C18.6569 4 20 5.34315 20 7V17C20 18.6569 18.6569 20 17 20H13C11.3431 20 10 18.6569 10 17C10 16.4477 9.55228 16 9 16C8.44772 16 8 16.4477 8 17C8 19.7614 10.2386 22 13 22H17C19.7614 22 22 19.7614 22 17V7C22 4.23858 19.7614 2 17 2H13Z"
-                                                        fill="#000000" />
-                                                    <path
-                                                        d="M3 11C2.44772 11 2 11.4477 2 12C2 12.5523 2.44772 13 3 13H11.2821C11.1931 13.1098 11.1078 13.2163 11.0271 13.318C10.7816 13.6277 10.5738 13.8996 10.427 14.0945C10.3536 14.1921 10.2952 14.2705 10.255 14.3251L10.2084 14.3884L10.1959 14.4055L10.1915 14.4115C10.1914 14.4116 10.191 14.4122 11 15L10.1915 14.4115C9.86687 14.8583 9.96541 15.4844 10.4122 15.809C10.859 16.1336 11.4843 16.0346 11.809 15.5879L11.8118 15.584L11.822 15.57L11.8638 15.5132C11.9007 15.4632 11.9553 15.3897 12.0247 15.2975C12.1637 15.113 12.3612 14.8546 12.5942 14.5606C13.0655 13.9663 13.6623 13.2519 14.2071 12.7071L14.9142 12L14.2071 11.2929C13.6623 10.7481 13.0655 10.0337 12.5942 9.43937C12.3612 9.14542 12.1637 8.88702 12.0247 8.7025C11.9553 8.61033 11.9007 8.53682 11.8638 8.48679L11.822 8.43002L11.8118 8.41602L11.8095 8.41281C11.4848 7.96606 10.859 7.86637 10.4122 8.19098C9.96541 8.51561 9.86636 9.14098 10.191 9.58778L11 9C10.191 9.58778 10.1909 9.58773 10.191 9.58778L10.1925 9.58985L10.1959 9.59454L10.2084 9.61162L10.255 9.67492C10.2952 9.72946 10.3536 9.80795 10.427 9.90549C10.5738 10.1004 10.7816 10.3723 11.0271 10.682C11.1078 10.7837 11.1931 10.8902 11.2821 11H3Z"
-                                                        fill="#000000" />
-                                                </svg>
-                                            </td>
-                                            <td style="width:95%" class="mbr-text mbr-fonts-style mb-3 display-7"
-                                                data-i18n="GetInvolved2"></td>
-                                        </tr>
-                                        <tr>
-                                            <td style="width:5%; vertical-align: top; text-align: left;">
-                                                <?xml version="1.0" encoding="utf-8"?><!-- Uploaded to: SVG Repo, www.svgrepo.com, Generator: SVG Repo Mixer Tools -->
-                                                <svg width="24px" height="24px" viewBox="0 0 24 24" id="Layer_1"
-                                                    data-name="Layer 1" xmlns="http://www.w3.org/2000/svg">
-                                                    <defs>
-                                                        <style>
-                                                            .cls-1 {
-                                                                fill: none;
-                                                                stroke: #020202;
-                                                                stroke-miterlimit: 10;
-                                                                stroke-width: 1.91px;
-                                                            }
-                                                        </style>
-                                                    </defs>
-                                                    <rect class="cls-1" x="5.32" y="1.5" width="13.36" height="21"
-                                                        rx="1.91" />
-                                                    <line class="cls-1" x1="5.32" y1="18.68" x2="18.68" y2="18.68" />
-                                                    <circle class="cls-1" cx="12" cy="8.18" r="1.91" />
-                                                    <path class="cls-1"
-                                                        d="M12,10.09h0A2.86,2.86,0,0,1,14.86,13v1a0,0,0,0,1,0,0H9.14a0,0,0,0,1,0,0V13A2.86,2.86,0,0,1,12,10.09Z" />
-                                                </svg>
-                                            </td>
-                                            <td style="width:95%" class="mbr-text mbr-fonts-style mb-3 display-7"
-                                                data-i18n="GetInvolved3"></td>
-                                        </tr>
-                                        <tr>
-                                            <td style="width:5%; vertical-align: top; text-align: left; ">
-                                                <?xml version="1.0" ?>
+                                    <p class="mbr-text mbr-fonts-style mb-1 display-7 >
+                                        <?xml version=" 1.0" encoding="iso-8859-1" ?>
+                                        <!-- Uploaded to: SVG Repo, www.svgrepo.com, Generator: SVG Repo Mixer Tools -->
+                                        <!DOCTYPE svg
+                                            PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+                                        <svg fill="#000000" height="24px" width="24px" version="1.1" id="Capa_1"
+                                            xmlns="http://www.w3.org/2000/svg"
+                                            xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 310 310"
+                                            xml:space="preserve">
+                                            <path d="M300.606,159.727l-45.333-45.333c-5.857-5.858-15.355-5.858-21.213,0L225,123.454V15c0-8.284-6.716-15-15-15H20
+	C11.716,0,5,6.716,5,15v240.002c0,8.284,6.716,15,15,15h85V295c0,8.284,6.716,15,15,15h45.333c3.979,0,7.794-1.581,10.607-4.394
+	l124.667-124.667C306.465,175.081,306.465,165.585,300.606,159.727z M35,30h160v123.454l-85.606,85.605
+	c-0.302,0.301-0.581,0.619-0.854,0.942H35V30z M159.12,280H135v-24.121l109.667-109.666l24.12,24.12L159.12,280z" />
+                                        </svg>
+                                        1. Register and agree our <a href="terms_of_services.html" target="_blank">Terms
+                                            and Conditions</a>,
+                                    </p>
+                                    <p class="mbr-text mbr-fonts-style mb-3 display-7">
+                                        <?xml version="1.0" encoding="utf-8"?><!-- Uploaded to: SVG Repo, www.svgrepo.com, Generator: SVG Repo Mixer Tools -->
+                                        <svg width="36px" height="36px" viewBox="0 0 24 24" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path
+                                                d="M13 2C10.2386 2 8 4.23858 8 7C8 7.55228 8.44772 8 9 8C9.55228 8 10 7.55228 10 7C10 5.34315 11.3431 4 13 4H17C18.6569 4 20 5.34315 20 7V17C20 18.6569 18.6569 20 17 20H13C11.3431 20 10 18.6569 10 17C10 16.4477 9.55228 16 9 16C8.44772 16 8 16.4477 8 17C8 19.7614 10.2386 22 13 22H17C19.7614 22 22 19.7614 22 17V7C22 4.23858 19.7614 2 17 2H13Z"
+                                                fill="#000000" />
+                                            <path
+                                                d="M3 11C2.44772 11 2 11.4477 2 12C2 12.5523 2.44772 13 3 13H11.2821C11.1931 13.1098 11.1078 13.2163 11.0271 13.318C10.7816 13.6277 10.5738 13.8996 10.427 14.0945C10.3536 14.1921 10.2952 14.2705 10.255 14.3251L10.2084 14.3884L10.1959 14.4055L10.1915 14.4115C10.1914 14.4116 10.191 14.4122 11 15L10.1915 14.4115C9.86687 14.8583 9.96541 15.4844 10.4122 15.809C10.859 16.1336 11.4843 16.0346 11.809 15.5879L11.8118 15.584L11.822 15.57L11.8638 15.5132C11.9007 15.4632 11.9553 15.3897 12.0247 15.2975C12.1637 15.113 12.3612 14.8546 12.5942 14.5606C13.0655 13.9663 13.6623 13.2519 14.2071 12.7071L14.9142 12L14.2071 11.2929C13.6623 10.7481 13.0655 10.0337 12.5942 9.43937C12.3612 9.14542 12.1637 8.88702 12.0247 8.7025C11.9553 8.61033 11.9007 8.53682 11.8638 8.48679L11.822 8.43002L11.8118 8.41602L11.8095 8.41281C11.4848 7.96606 10.859 7.86637 10.4122 8.19098C9.96541 8.51561 9.86636 9.14098 10.191 9.58778L11 9C10.191 9.58778 10.1909 9.58773 10.191 9.58778L10.1925 9.58985L10.1959 9.59454L10.2084 9.61162L10.255 9.67492C10.2952 9.72946 10.3536 9.80795 10.427 9.90549C10.5738 10.1004 10.7816 10.3723 11.0271 10.682C11.1078 10.7837 11.1931 10.8902 11.2821 11H3Z"
+                                                fill="#000000" />
+                                        </svg>
+                                        2. Once your Account is created,
+                                        Log in and announce or search the materials (with specifications) you want to
+                                        trade or the related services you offer or demand. To increase chances of being
+                                        contacted it is advised to publish pictures and describe in detail the materials
+                                        offered.
+                                    </p>
+                                    <p class="mbr-text mbr-fonts-style mb-3 display-7">
+                                        <?xml version="1.0" encoding="utf-8"?><!-- Uploaded to: SVG Repo, www.svgrepo.com, Generator: SVG Repo Mixer Tools -->
+                                        <svg width="24px" height="24px" viewBox="0 0 24 24" id="Layer_1"
+                                            data-name="Layer 1" xmlns="http://www.w3.org/2000/svg">
+                                            <defs>
+                                                <style>
+                                                    .cls-1 {
+                                                        fill: none;
+                                                        stroke: #020202;
+                                                        stroke-miterlimit: 10;
+                                                        stroke-width: 1.91px;
+                                                    }
+                                                </style>
+                                            </defs>
+                                            <rect class="cls-1" x="5.32" y="1.5" width="13.36" height="21" rx="1.91" />
+                                            <line class="cls-1" x1="5.32" y1="18.68" x2="18.68" y2="18.68" />
+                                            <circle class="cls-1" cx="12" cy="8.18" r="1.91" />
+                                            <path class="cls-1"
+                                                d="M12,10.09h0A2.86,2.86,0,0,1,14.86,13v1a0,0,0,0,1,0,0H9.14a0,0,0,0,1,0,0V13A2.86,2.86,0,0,1,12,10.09Z" />
+                                        </svg>
+                                        3. Contact users that have the
+                                        materials or offer the services of your interest. Choose the best option and
+                                        close the deal using the transaction method of your preference.
+                                    </p>
+                                    <p class="mbr-text mbr-fonts-style display-7">
+                                        <?xml version="1.0" ?>
 
-                                                <!-- Uploaded to: SVG Repo, www.svgrepo.com, Generator: SVG Repo Mixer Tools -->
-                                                <svg fill="#000000" width="36px" height="36px" viewBox="0 0 512 512"
-                                                    xmlns="http://www.w3.org/2000/svg">
+                                        <!-- Uploaded to: SVG Repo, www.svgrepo.com, Generator: SVG Repo Mixer Tools -->
+                                        <svg fill="#000000" width="24px" height="24px" viewBox="0 0 512 512"
+                                            xmlns="http://www.w3.org/2000/svg">
 
-                                                    <g id="Environment_management">
+                                            <g id="Environment_management">
 
-                                                        <path
-                                                            d="M379.65,265.79c0-19.92-8.95-38.31-24.09-53.2a24.41,24.41,0,0,1-7-21.67,86.25,86.25,0,0,0,1.28-14.82c0-49.54-42-89.7-93.86-89.7s-93.86,40.16-93.86,89.7a86.25,86.25,0,0,0,1.28,14.82,24.41,24.41,0,0,1-7,21.67c-15.14,14.89-24.09,33.28-24.09,53.2,0,47.34,50.56,86.11,114.65,89.45v39.21H174.35v18H334.42v-18H265V355.24C329.09,351.9,379.65,313.13,379.65,265.79ZM247,355.23V302.79l-32-31.72,12.67-12.79L256,286.37l28.34-28.09L297,271.07l-32,31.72v52.44Z" />
+                                                <path
+                                                    d="M379.65,265.79c0-19.92-8.95-38.31-24.09-53.2a24.41,24.41,0,0,1-7-21.67,86.25,86.25,0,0,0,1.28-14.82c0-49.54-42-89.7-93.86-89.7s-93.86,40.16-93.86,89.7a86.25,86.25,0,0,0,1.28,14.82,24.41,24.41,0,0,1-7,21.67c-15.14,14.89-24.09,33.28-24.09,53.2,0,47.34,50.56,86.11,114.65,89.45v39.21H174.35v18H334.42v-18H265V355.24C329.09,351.9,379.65,313.13,379.65,265.79ZM247,355.23V302.79l-32-31.72,12.67-12.79L256,286.37l28.34-28.09L297,271.07l-32,31.72v52.44Z" />
 
-                                                    </g>
+                                            </g>
 
-                                                </svg>
-                                            </td>
-                                            <td style="width:95%" class="mbr-text mbr-fonts-style mb-3 display-7"
-                                                data-i18n="GetInvolved4"> </td>
-                                        </tr>
-                                    </table>
+                                        </svg>
+                                        4. Once the operation is completed
+                                        check out so the emissions avoided by the transaction are registered in our
+                                        Green Counter.
+                                    </p>
+
                                 </div>
                             </div>
                         </div>
@@ -394,12 +510,25 @@
                             <div class="col-12 col-lg col-md-12">
                                 <div class="text-wrapper align-right">
                                     <h1 id="Titlewhyco2" class="mbr-section-title mbr-fonts-style mb-4 display-2">
-                                        <strong>
-                                            <p data-i18n="WhyCO2Emissions"></p>
-                                        </strong>
+                                        <strong>Why CO2 Emissions?</strong>
                                     </h1>
-                                    <p class="mbr-text mbr-fonts-style mb-3 display-7"
-                                        data-i18n="WhyCO2EmissionsCykleekspromotes"></p>
+                                    <p class="mbr-text mbr-fonts-style mb-3 display-7">Cykleek´s promotes best waste
+                                        management practices that fit your needs and creates opportunities out of
+                                        what
+                                        could be considered a loss or burden for the environment. There are
+                                        different
+                                        indicators but Carbon dioxide Emissions are chosen due to the critical
+                                        impact
+                                        they have on global warming and its direct connection with our life style
+                                        and
+                                        daily consumption patterns. When resources use is optimized, water, energy
+                                        and
+                                        raw materials are also spared so every time Cykleek is used, it means a
+                                        tangible
+                                        contribution to save resources is achieved too. Regardless the size of the
+                                        impact, every reduced emission counts and we All can contribute to halt one
+                                        of
+                                        the biggest global threats we face nowadays: Climate Change. </p>
                                     <p class="mbr-text mbr-fonts-style mb-3 display-7"></p>
                                     <p class="mbr-text mbr-fonts-style display-7"></p>
 
@@ -431,14 +560,26 @@
                                 <div class="text-wrapper align-left">
                                     <h1 id="Titleantigreenwashing"
                                         class="mbr-section-title mbr-fonts-style mb-4 display-2">
-                                        <strong>
-                                            <p data-i18n="AntiGreenwashingStatement"></p>
-                                        </strong>
+                                        <strong>Anti greenwashing statement</strong>
                                     </h1>
-                                    <p class="mbr-text mbr-fonts-style mb-3 display-7"
-                                        data-i18n="AntiGreenwashingStatementAtCykleek"></p>
+                                    <p class="mbr-text mbr-fonts-style mb-3 display-7">At Cykleek we definitely think
+                                        that one of the main problems that hinders a real change is to claim delusive
+                                        achievements announcing that products or processes are sustainable, green,
+                                        eco,
+                                        climate smart, neutral or any of the plentiful expressions and terms that
+                                        saturate media, ads, public opinion and even sectors of the academy. At the
+                                        same
+                                        time, it is evident that rising emissions and increasing degradation go
+                                        hand
+                                        in hand with those misleading claims, keeping business as usual and
+                                        suffocating
+                                        true efforts to stop the devastation. Cykleek decisively commits to combat
+                                        Greenwashing and will cautiously screen entities that want to join our
+                                        community
+                                        and pretend to use it for those dubious purposes. </p>
                                     <p class="mbr-text mbr-fonts-style mb-3 display-7"></p>
                                     <p class="mbr-text mbr-fonts-style display-7"></p>
+
                                 </div>
                             </div>
                         </div>
@@ -458,12 +599,23 @@
                                 <div class="text-wrapper align-right">
                                     <h1 id="Titleshorstoryofthers"
                                         class="mbr-section-title mbr-fonts-style mb-4 display-2">
-                                        <strong>
-                                            <p data-i18n="ShortStoryRs"></p>
-                                        </strong>
+                                        <strong>Short Story of the Rs</strong>
                                     </h1>
-                                    <p class="mbr-text mbr-fonts-style mb-3 display-7"
-                                        data-i18n="ShortStoryRsFewGenerations"><span id="dotsStoryRs">...</span><span
+                                    <p class="mbr-text mbr-fonts-style mb-3 display-7">Few generations back,
+                                        concepts
+                                        like recycling, reusing, reducing or repurposing were far from the public
+                                        domain
+                                        in the same sense of today. Despite that, those practices were more observed
+                                        on
+                                        a spontaneous way, in accordance to other lifestyles. For the first time in
+                                        history and since 2007 the Urban Population exceeded the Rural one
+                                        worldwide.
+                                        Nowadays the urgency of more sustainable world goes without saying and
+                                        probably
+                                        no one disagrees on that, but at the same time complexities in a growing
+                                        Urban
+                                        world increase and practicing the Rs is not that straightforward despite the
+                                        surge of awareness and hype associated.<span id="dotsStoryRs">...</span><span
                                             id="moreStoryRs"><br>
                                             <svg xmlns="http://www.w3.org/2000/svg" fill="none" width="32px"
                                                 height="32px" viewBox="0 0 24 24" stroke-width="1.5"
@@ -471,15 +623,38 @@
                                                 <path stroke-linecap="round" stroke-linejoin="round"
                                                     d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3" />
                                             </svg><br>
-                                            <p class="mbr-text mbr-fonts-style mb-3 display-7"
-                                                data-i18n="ShortStoryRsAspossible">
+                                            After a rapid economic growth Japan, being a highly densely populated
+                                            island
+                                            nation, quickly faced a problem with their residues and started to think
+                                            how
+                                            to overcome that challenge. Twenty years ago (in 2004), Japan´s Prime
+                                            Minister, Mr Junichiro Koizumi, introduced the 3R (REDUCE, REUSE and
+                                            RECYCLE) initiative, coinciding with intellectuals, activists and
+                                            responsible citizens around the world that we have gone too far on an
+                                            unsustainable Planet. Nine years after, Bea Johnson- in her book Zero
+                                            Waste
+                                            Home- complemented the Rs adding REFUSE and ROT (i.e. compost). In the last
+                                            decade more
+                                            Rs
+                                            have been proposed, reaching 7R with RETHINK and REPAIR and even 10 Rs
+                                            with
+                                            the introduction of REFURBISH, REPURPOSE AND RECOVER. Others talk about
+                                            REMANUFACTURE and more synonyms that basically go on to the same
+                                            direction.
+                                            At Cykleek All these Rs Can Happen and we are enthusiastic to promote
+                                            their
+                                            practice regardless of their names, with special interest on those that
+                                            AVOID a product or routine consuming resources (“The best waste is the
+                                            one
+                                            that is not generated”) like REFUSE (e.g. to stop using Styrofoam to
+                                            pack
+                                            lunchboxes!) or RETHINK (e.g. taking PUBLIC TRANSPORT or even better,
+                                            WALKING or BIKING as possible).
                                         </span>
                                     </p>
                                     <button
                                         onclick="readmoreText('shorstoryofthers','dotsStoryRs','moreStoryRs','BtnStoryRs')"
-                                        id="BtnStoryRs">
-                                        <p data-i18n="Readmore"></p>
-                                    </button>
+                                        id="BtnStoryRs">Read more</button>
                                     <p class="mbr-text mbr-fonts-style display-7"></p>
 
                                 </div>
@@ -504,13 +679,22 @@
                                 <div class="text-wrapper align-center">
                                     <h1 id="Titleshorstoryofthers"
                                         class="mbr-section-title mbr-fonts-style mb-4 display-2">
-                                        <strong>
-                                            <p data-i18n="ComingUpCampaigns"></p>
-                                        </strong>
+                                        <strong>Coming up Campaigns</strong>
                                     </h1>
-                                    <p class="mbr-text mbr-fonts-style mb-3 display-7 align-justify"
-                                        data-i18n="ComingUpCampaignsCykleekSupports">
+                                    <p class="mbr-text mbr-fonts-style mb-3 display-7 align-justify">
+                                        Cykleek supports efforts for environmental awareness, volunteerism, education,
+                                        art & culture, clean air, behaviour change, wildlife conservation, water &
+                                        energy saving, clean ups and any other type of campaigns for a better Planet.
+                                        To be able to announce campaigns you should be registered in any of the
+                                        different categories and fill out this <a href="formulary.html"
+                                            target="_blank">Formulary</a> to describe the type of event,
+                                        provide external links and other related practical information.
+                                        We want to echo all these endeavours but priority will be given to
+                                        action-oriented Campaigns like clean ups or tree planting likewise to
+                                        institutional concrete commitments to enact regulations to protect the
+                                        environment, specially those stopping the generation unnecessary waste.
                                     </p>
+
                                 </div>
                             </div>
                         </div>
@@ -525,9 +709,7 @@
         <div class="container">
             <div class="col-12 mb-5 content-head">
                 <h3 id="TitleFAQ" class="mbr-section-title mbr-fonts-style align-center mb-0 display-2">
-                    <strong>
-                        <p data-i18n="FAQs"></p>
-                    </strong>
+                    <strong>FAQs</strong>
                 </h3>
 
             </div>
@@ -707,9 +889,7 @@
                 <div class="col-12 content-head">
                     <div class="mbr-section-head mb-5">
                         <h3 class="mbr-section-title mbr-fonts-style align-center mb-0 display-2">
-                            <strong>
-                                <p data-i18n="joinus"></p>
-                            </strong>
+                            <strong>Join Us</strong>
                         </h3>
 
                     </div>
@@ -721,11 +901,10 @@
                         data-form-title="Form Name"><input type="hidden" name="email" data-form-email="true"
                             value="Q/mTCy/r/WEIH8Zcxn0Gk0gZgW5zbb36fMgPQrr8LJxBHd3Y605NJWJnd+nkgPkA+0L7clSngxReQHbKchBd1G1UZAMn2ZamKV3ZFRJ6jMOmwATiQkx0fXtEKP/l3+bp">
                         <div class="row">
-                            <div hidden="hidden" data-form-alert="" class="alert alert-success col-12">
-                                <p data-i18n="ThanksForFillingOutform"></p>
-                            </div>
+                            <div hidden="hidden" data-form-alert="" class="alert alert-success col-12">Thanks for
+                                filling out the form!</div>
                             <div hidden="hidden" data-form-alert-danger="" class="alert alert-danger col-12">
-                                <p data-i18n="OopsSomeProblem"></p>
+                                Oops...! some problem!
                             </div>
                         </div>
                         <div class="dragArea row">
@@ -770,7 +949,8 @@
         <script src="assets/theme/js/script.js"></script>
         <script src="assets/formoid/formoid.min.js"></script>
         <script src="assets\cykleek_js\readmore.js"></script>
-        <script>function readmoreText(text, dots, more, myBtn) {
+        <script>
+            function readmoreText(text, dots, more, myBtn) {
                 var dots = document.getElementById(dots);
                 var moreText = document.getElementById(more);
                 var btnText = document.getElementById(myBtn);
@@ -789,7 +969,8 @@
                     // Scroll back to the beginning of the paragraph
                     //paragraph.scrollIntoView({ behavior: 'smooth' });
                 }
-            }</script>
+            }
+        </script>
         <script>
             function seeAnswer(dots, more, myBtn) {
                 var dots = document.getElementById(dots, more, myBtn);
@@ -807,7 +988,28 @@
                 }
             }
         </script>
-        <script src="assets/js/script.js"></script>
+
+        <script>
+            function changeLanguage() {
+                var language = document.getElementById("language-select").value;
+                document.getElementById("english-content").style.display = "none";
+                document.getElementById("spanish-content").style.display = "none";
+
+                if (language === "en") {
+                    document.getElementById("english-content").style.display = "block";
+                } else if (language === "es") {
+                    document.getElementById("spanish-content").style.display = "block";
+                    document.title = "2da Mano y Gestor de Residuos";
+                } else if (language === "tr") {
+                    document.getElementById("turkey-content").style.display = "block";
+                    document.title = "2. El ve Atık Yonetimi";
+                }
+            }
+
+            // Set the default language to English
+            document.getElementById("language-select").value = "en";
+            changeLanguage();
+        </script>
     </section>
 </body>
 
