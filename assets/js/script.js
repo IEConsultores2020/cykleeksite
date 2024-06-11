@@ -21,9 +21,16 @@
     });
   }
 
-  function changeLanguage(value) {
-    const nextLanguageSelect = document.getElementById('nextLanguage');
-    nextLanguageSelect.value = value;
+  function changeLanguage( lang, flagClass, languageText) {
+ 
+    // Prevent default behavior of anchor tag
+    Event.preventDefault();
+    // Update the flag and language text
+    document.getElementById('selected-flag').className = `flag-icon ${flagClass}`;
+    document.getElementById('selected-language').textContent = languageName;
+
+    // Optional: Perform additional actions, like changing the page language
+    console.log(`Language changed to: ${languageName}`);
   }
   
   // Function to change language
