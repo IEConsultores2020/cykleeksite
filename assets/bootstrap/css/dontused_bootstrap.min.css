@@ -663,7 +663,7 @@ progress {
     }
 }
 
-@media (min-width:992px) {
+@media (min-width:1167px) {
 
     .container,
     .container-lg,
@@ -1351,7 +1351,7 @@ progress {
     }
 }
 
-@media (min-width:992px) {
+@media (min-width:1167px) {
     .col-lg {
         flex: 1 0 0%
     }
@@ -2178,7 +2178,7 @@ progress {
     }
 }
 
-@media (max-width:991.98px) {
+@media (max-width:1165.98px) {
     .table-responsive-lg {
         overflow-x: auto;
         -webkit-overflow-scrolling: touch
@@ -3987,7 +3987,7 @@ fieldset:disabled .btn {
     }
 }
 
-@media (min-width:992px) {
+@media (min-width:1167px) {
     .dropdown-menu-lg-start {
         --bs-position: start
     }
@@ -4618,7 +4618,7 @@ fieldset:disabled .btn {
     }
 }
 
-@media (min-width:992px) {
+@media (min-width:1167px) {
     .navbar-expand-lg {
         flex-wrap: nowrap;
         justify-content: flex-start
@@ -5619,7 +5619,7 @@ fieldset:disabled .btn {
     }
 }
 
-@media (min-width:992px) {
+@media (min-width:1167px) {
     .list-group-horizontal-lg {
         flex-direction: row
     }
@@ -6099,7 +6099,7 @@ fieldset:disabled .btn {
     }
 }
 
-@media (min-width:992px) {
+@media (min-width:1167px) {
 
     .modal-lg,
     .modal-xl {
@@ -6192,7 +6192,7 @@ fieldset:disabled .btn {
     }
 }
 
-@media (max-width:991.98px) {
+@media (max-width: 1166px) {
     .modal-fullscreen-lg-down {
         width: 100vw;
         max-width: none;
@@ -7078,7 +7078,7 @@ fieldset:disabled .btn {
     }
 }
 
-@media (min-width:992px) {
+@media (min-width:1167px) {
     .sticky-lg-top {
         position: -webkit-sticky;
         position: sticky;
@@ -9680,7 +9680,7 @@ fieldset:disabled .btn {
     }
 }
 
-@media (min-width:992px) {
+@media (min-width:1167px) {
     .float-lg-start {
         float: left !important
     }

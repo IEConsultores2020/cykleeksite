@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<!--  created with sitemap generator https://octopus.do  -->
+
+    <url>
+        <loc>https://cykleek.com</loc>
+        <lastmod>2024-06-12</lastmod>
+        <changefreq>always</changefreq>
+        <priority>0.5</priority>
+    </url>
+    <url>
+        <loc>http://cykleek.com:3000/users/sign_in?locale=en</loc>
+        <lastmod>2024-06-12</lastmod>
+        <changefreq>always</changefreq>
+        <priority>0.5</priority>
+    </url>
+    <url>
+        <loc>http://cykleek.com:3000/users/sign_up?locale=en</loc>
+        <lastmod>2024-06-12</lastmod>
+        <changefreq>always</changefreq>
+        <priority>0.5</priority>
+    </url>
+    <url>
+        <loc>http://cykleek.com:3000/users/password/new?locale=en</loc>
+        <lastmod>2024-06-12</lastmod>
+        <changefreq>always</changefreq>
+        <priority>0.5</priority>
+    </url>
+    <url>
+        <loc>http://cykleek.com:3000/terms_of_services?locale=en</loc>
+        <lastmod>2024-06-12</lastmod>
+        <changefreq>always</changefreq>
+        <priority>0.5</priority>
+    </url>
+</urlset>

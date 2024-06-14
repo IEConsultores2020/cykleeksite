@@ -35,7 +35,7 @@
     }
 }
 
-@media (min-width:992px) {
+@media (min-width:1167px) {
 
     .container,
     .container-lg,
@@ -724,7 +724,7 @@
     }
 }
 
-@media (min-width:992px) {
+@media (min-width:1167px) {
     .col-lg {
         flex: 1 0 0%
     }
@@ -3176,7 +3176,7 @@
     }
 }
 
-@media (min-width:992px) {
+@media (min-width:1167px) {
     .d-lg-inline {
         display: inline !important
     }

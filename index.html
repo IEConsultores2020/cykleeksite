@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
     <!-- Site made with Mobirise Online Website Builder v5.9.13, https://a.mobirise.com and modified by IEConsultores -->
@@ -29,7 +29,7 @@
         content="Cykleek aims to redefine waste and promote best waste management practices, creating opportunities out of what could be considered a loss or burden for the environment.">
     <title>2nd. Hand & Waste Manager</title>
     <link rel="stylesheet" href="assets\web\assets\mobirise-icons2\mobirise2.css?rnd=1716071066321">
-    <link rel="stylesheet" href="assets\bootstrap\css\bootstrap.min.css?rnd=1716071066321">
+    <!-- link rel="stylesheet" href="assets\bootstrap\css\bootstrap.min.css?rnd=1716071066321"-->
     <link rel="stylesheet" href="assets\bootstrap\css\bootstrap-grid.min.css?rnd=1716071066321">
     <link rel="stylesheet" href="assets\bootstrap\css\bootstrap-reboot.min.css?rnd=1716071066321">
 
@@ -41,7 +41,7 @@
         as="style" onload="this.onload=null;this.rel='stylesheet'">
 
     <link href="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/3.1.0/css/flag-icon.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets\bootstrap\4.5.2\css\bootstrap.min.css">
     <style>
         .flag-icon {
             margin-right: 5px;
@@ -57,6 +57,41 @@
 </head>
 
 <body>
+
+    <section data-bs-version="5.1" class="menu menu2 cid-ubtvYa9bdK" once="menu" id="menu-5-ubtvYa9bdK">
+        <nav class="navbar navbar-dropdown navbar-header navbar-expand-lg display-8">
+            <div class="container">
+                <span class="navbar-caption-wrap text-black">
+                    <ul class="navbar-nav">
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="dropdown09" data-toggle="dropdown"
+                                aria-haspopup="true" aria-expanded="false">
+                                <span id="selected-flag" class="flag-icon flag-icon-gb"></span>
+                                <span id="selected-language">English</span>
+                            </a>
+                            <div class="dropdown-menu" href="#" aria-labelledby="dropdown09">
+                                <a class="dropdown-item" href="#"
+                                    onclick="changeLanguage('en', 'flag-icon-gb', 'English')">
+                                    <span class="flag-icon flag-icon-gb"> </span>
+                                    English
+                                </a>
+                                <a class="dropdown-item" href="#"
+                                    onclick="changeLanguage('es', 'flag-icon-es', 'Español')">
+                                    <span class="flag-icon flag-icon-es"> </span>
+                                    Español
+                                </a>
+                                <a class="dropdown-item" href="#"
+                                    onclick="changeLanguage('tr','flag-icon-tr', 'Türkiye')">
+                                    <span class="flag-icon flag-icon-tr"> </span>
+                                    Türkiye
+                                </a>
+                            </div>
+                        </li>
+                    </ul>
+                </span>
+            </div>
+        </nav>
+    </section>
 
     <section data-bs-version="5.1" class="menu menu2 cid-ubtvYa8a88" once="menu" id="menu-5-ubtvYa8a88">
         <nav class="navbar navbar-dropdown navbar-fixed-top navbar-expand-lg">
@@ -75,27 +110,19 @@
                             </picture>
                         </a>
                     </span>
-                    <!--
-                    <span class="navbar-caption-wrap text-black display-4">
-                        <ul>
-                            <li><a href="index.html" onclick="changeLanguage('en')">English</a></li>
-                            <li><a href="index.html" onclick="changeLanguage('es')">Español</a></li>
-                            <li><a href="index.html" onclick="changeLanguage('tr')">Türkiye</a></li>
-                        </ul>
-                    </span>
-                    -->
+                    <!--                    
                     <span class="navbar-caption-wrap text-black display-4">
                         <ul class="navbar-nav">
                             <li class="nav-item dropdown">
                                 <a class="nav-link dropdown-toggle" href="#" id="dropdown09" data-toggle="dropdown"
                                     aria-haspopup="true" aria-expanded="false">
-                                    <span id="selected-flag" class="flag-icon flag-icon-us"></span>
+                                    <span id="selected-flag" class="flag-icon flag-icon-gb"></span>
                                     <span id="selected-language">English</span>
                                 </a>
                                 <div class="dropdown-menu" href="#" aria-labelledby="dropdown09">
                                     <a class="dropdown-item" href="#"
-                                        onclick="changeLanguage('en', 'flag-icon-us', 'English')">
-                                        <span class="flag-icon flag-icon-us"> </span>
+                                        onclick="changeLanguage('en', 'flag-icon-gb', 'English')">
+                                        <span class="flag-icon flag-icon-gb"> </span>
                                         English
                                     </a>
                                     <a class="dropdown-item" href="#"
@@ -112,8 +139,9 @@
                             </li>
                         </ul>
                     </span>
+                    -->
                     <span class="navbar-caption-wrap"><a class="navbar-caption text-black display-4"
-                            href="http://www.cykleek.com">Under <br> Construction.. </a>
+                            href="http://www.cykleek.com" data-i18n="UnderConstruction"> </a>
                         <svg fill="#000000" width="50px" height="50px" viewBox="0 0 100 100" version="1.1"
                             xml:space="preserve" xmlns="http://www.w3.org/2000/svg"
                             xmlns:xlink="http://www.w3.org/1999/xlink">
@@ -144,61 +172,58 @@
                     </div>
                 </button>
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                    <ul class="navbar-nav nav-dropdown" data-app-modern-menu="true">
+                    <ul class="navbar-nav">
                         <li class="nav-item">
-                            <a class="link" href="#Commitment" aria-expanded="false">
-                                <p class="nav-link text-black display-4" data-i18n=".OurCommitment"></p>
+                            <a href="#Commitment" aria-expanded="false">
+                                <p class="nav-link link text-black display-4" data-i18n=".OurCommitment"></p>
                             </a>
                         </li>
-                        <li class="nav-item">
-                            <a class="link" href="#howdoesitworks" aria-expanded="false">
-                                <p class="nav-link text-black display-4" data-i18n="HowDoesItWork"></p>
+                        <li class="nav-item ">
+                            <a href="#howdoesitworks" aria-expanded="false">
+                                <p class="nav-link link text-black display-4" data-i18n="HowDoesItWork"></p>
                             </a>
                         </li>
-                        <li class="nav-item">
-                            <a class="link" href="#getinvolved" aria-expanded="false">
-                                <p class="nav-link text-black display-4" data-i18n="GetInvolved"></p>
+                        <li class="nav-item ">
+                            <a href="#getinvolved" aria-expanded="false">
+                                <p class="nav-link link text-black display-4" data-i18n="GetInvolved"></p>
                             </a>
                         </li>
-                        <li class="nav-item">
-                            <a class="link" href="#whyco2" aria-expanded="false">
-                                <p class="nav-link text-black display-4" data-i18n="WhyCO2.."></p>
+                        <li class="nav-item ">
+                            <a href="#whyco2" aria-expanded="false">
+                                <p class="nav-link link text-black display-4" data-i18n="WhyCO2.."></p>
                             </a>
                         </li>
-                        <li class="nav-item">
-                            <a class="link" href="#antigreenwashing" aria-expanded="false">
-                                <p class="nav-link text-black display-4" data-i18n="AntiGreenwashing.."></p>
+                        <li class="nav-item ">
+                            <a href="#antigreenwashing" aria-expanded="false">
+                                <p class="nav-link link text-black display-4" data-i18n="AntiGreenwashing.."></p>
                             </a>
                         </li>
-                        <li class="nav-item">
-                            <a class="nav-link link text-black display-4" href="#shorstoryofthers"
-                                aria-expanded="false">
-                                <p data-i18n="..StoryoftheRs"></p>
+                        <li class="nav-item ">
+                            <a href="#shorstoryofthers" aria-expanded="false">
+                                <p class="nav-link link text-black display-4" data-i18n="..StoryoftheRs"></p>
                             </a>
                         </li>
-                        <li class="nav-item">
-                            <a class="nav-link link text-black display-4" href="#commingup" aria-expanded="false">
-                                <p data-i18n="..Campaigns"></p>
+                        <li class="nav-item ">
+                            <a href="#commingup" aria-expanded="false">
+                                <p class="nav-link link text-black display-4" data-i18n="..Campaigns"></p>
                             </a>
                         </li>
-                        <li class="nav-item">
-                            <a class="nav-link link text-black display-4" href="#FAQ">
-                                <p data-i18n="FAQ"></p>
+                        <li class="nav-item ">
+                            <a href="#FAQ" aria-expanded="false">
+                                <p class="nav-link link text-black display-4" data-i18n="FAQ"></p>
                             </a>
                         </li>
-                        <li class="nav-item">
-                            <a class="nav-link link text-black display-4" href="#joinus">
-                                <p data-i18n="Joinus"></p>
+                        <li class="nav-item ">
+                            <a href="#joinus" aria-expanded="false">
+                                <p class="nav-link link text-black display-4" data-i18n="Joinus"></p>
                             </a>
                         </li>
-
                     </ul>
-                    <div class="navbar-buttons mbr-section-btn">
-                        <a class="btn btn-primary display-4" href="http://cykleek.com:3000/">
-                            <p data-i18n="GotoApp"></p>
-                        </a>
-                    </div>
-
+                </div>
+                <div class="navbar-buttons mbr-section-btn">
+                    <a class="btn btn-primary display-4" href="http://cykleek.com:3000/">
+                        <p data-i18n="GotoApp"></p>
+                    </a>
                 </div>
             </div>
         </nav>
@@ -544,7 +569,58 @@
                                     <h1 id="Titleshorstoryofthers"
                                         class="mbr-section-title mbr-fonts-style mb-4 display-2">
                                         <strong>
-                                            <p data-i18n="ComingUpCampaigns"></p>
+                                            <span class="d-inline-flex">
+                                                <p data-i18n="ComingUpCampaigns"></p>
+                                                <?xml version="1.0" encoding="utf-8"?><!-- Uploaded to: SVG Repo, www.svgrepo.com, Generator: SVG Repo Mixer Tools -->
+                                                <svg width="80px" height="80px" viewBox="0 0 128 128"
+                                                    xmlns="http://www.w3.org/2000/svg"
+                                                    xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true"
+                                                    role="img" class="iconify iconify--noto"
+                                                    preserveAspectRatio="xMidYMid meet">
+                                                    <path
+                                                        d="M65.82 111.42l-13.38.54c-4.53-.1-6.01-1.45-7.62-5.53l-3.41-8.6l6.28-1.31l2.95 7.45a1.99 1.99 0 0 0 1.99 1.26l10.5-.76c2.93-.31 3.41-2 2.78-3.59l-3.16-7.97l7.98-2.78l3.47 8.77c1.09 2.76 1.83 5.82.57 8.31c-1.45 2.87-3.77 3.99-8.95 4.21z"
+                                                        fill="#82aec0"></path>
+                                                    <path
+                                                        d="M41.63 98.38l1.82 4.59s.71-1.06 3.02-1.26c2.63-.23 3.66.96 3.66.96l-1.87-4.72l-6.63.43z"
+                                                        fill="#2f7889"></path>
+                                                    <path
+                                                        d="M64.35 96.92l8.85-.59c1.2 2.59 1.73 4.63 1.73 4.63s-1.85-1.55-5.29-1.32c-2.46.16-3.49 1.87-3.49 1.87l-1.8-4.59z"
+                                                        fill="#2f7889"></path>
+                                                    <ellipse transform="rotate(-21.604 15.324 86.192)" cx="15.33"
+                                                        cy="86.2" rx="9.89" ry="17.95" fill="#b8dade"></ellipse>
+                                                    <path
+                                                        d="M26.58 94.5c-1.96-1.48-7.27 2.58-7.27 2.58c-.68 4.75-5.93 3.38-5.93 3.38c2.89 2.44 5.98 3.44 8.56 2.42c2.74-1.08 4.33-4.25 4.64-8.38z"
+                                                        fill="#82aec0"></path>
+                                                    <path
+                                                        d="M80.96 14.59L13.37 69.62c-2.68 1.84-3.95 9.22-.63 17.6s9.4 13.24 12.58 12.18l86.86-5.94c9.43-3.73 10.08-24.42 1.46-46.2s-23.25-36.4-32.68-32.67z"
+                                                        fill="#f44336"></path>
+                                                    <path
+                                                        d="M95.17 80.52c3.19 4.71-1.91 4.92-22.42 8.34c-5.61.94-53.44 8.23-53.44 8.23c1.29 1.19 3.87 3.04 6.07 2.33c0 0 85.21-5.32 86.81-5.95L95.17 80.52z"
+                                                        fill="#c62828"></path>
+                                                    <path
+                                                        d="M73.39 27.74c1.4-1.01 3.41-2.57 3.89-5.27c.25-1.41.43-3.02.76-3.71c.65-1.37 3.14-4.51 3.14-4.51l-67.8 55.37c-1.83 1.25-2.09 3.34-2.09 3.34c10.38-7.78 51.78-37.75 62.1-45.22z"
+                                                        fill="#c62828"></path>
+                                                    <ellipse transform="rotate(-21.604 100.448 52.485)" cx="100.46"
+                                                        cy="52.49" rx="18.08" ry="44.77" fill="#b8dade"></ellipse>
+                                                    <ellipse transform="rotate(-21.604 102.614 51.627)" cx="102.62"
+                                                        cy="51.63" rx="11.86" ry="37.15" fill="#2f7889"></ellipse>
+                                                    <linearGradient id="IconifyId17ecdb2904d178eab13617"
+                                                        gradientUnits="userSpaceOnUse" x1="115.708" y1="83.059"
+                                                        x2="103.15" y2="52.92">
+                                                        <stop offset="0" stop-color="#353738"></stop>
+                                                        <stop offset="1" stop-color="#353738" stop-opacity="0"></stop>
+                                                    </linearGradient>
+                                                    <path
+                                                        d="M116.3 86.17c6.09-2.41 4.9-19.83-2.65-38.91L91.6 56c7.55 19.07 18.61 32.58 24.7 30.17z"
+                                                        fill="url(#IconifyId17ecdb2904d178eab13617)"></path>
+                                                    <path
+                                                        d="M79.71 37.64c-1.29-5.68-1.18-10.86-.36-14.91c.23-1.1.99-2.42 2.12-2.29c1.12.13 1.45 1.19 1.32 2.31c-.44 3.82-.1 9.08.92 14.07c.23 1.11.21 2.56-1.36 3.12c-1.36.5-2.41-1.3-2.64-2.3z"
+                                                        fill="#ffffff"></path>
+                                                    <path
+                                                        d="M15 75.47l55.73-37.52c1.7-1.13 3.81-3 4.23.76c.26 2.34.56 4.36.35 7.4c-.13 1.89-3.84 3.35-5 3.94L14.93 78.84c-.84.42-2.4.81-2.14-.7c.29-1.63 1.76-2.37 2.21-2.67z"
+                                                        opacity=".45" fill="#ffca28"></path>
+                                                </svg>
+                                            </span>
                                         </strong>
                                     </h1>
                                     <p class="mbr-text mbr-fonts-style mb-3 display-7 align-justify"
@@ -731,7 +807,7 @@
                 } else {
                     const svgCode = '<svg light width="36px" height="36x" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" ><path d="M4 4V20M8 12H20M8 12L12 8M8 12L12 16" stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>'
                     dots.style.display = "none";
-                    btnText.innerHTML = svgCode;
+                    btnText.innerHTML = 36;
                     moreText.style.display = "inline";
                     // Scroll back to the beginning of the paragraph
                     //paragraph.scrollIntoView({ behavior: 'smooth' });
