@@ -1136,7 +1136,7 @@ a {
 .cid-ubtvYa8a88 .dropdown-menu {
     flex-wrap: wrap;
     flex-direction: column;
-    max-width: 100%;
+    max-width: 50px;
     padding: 12px 4px !important;
     border-radius: 1.5rem;
     transition: 0.3s all !important;
@@ -1151,7 +1151,7 @@ a {
 }
 
 .cid-ubtvYa8a88 .dropdown .dropdown-menu .dropdown-item {
-    width: auto;
+    width: 50%;
     transition: all 0.25s ease-in-out;
 }
 
@@ -1286,7 +1286,7 @@ a {
     }
 
     .cid-ubtvYa8a88 .navbar .dropdown-menu .dropdown-item:after {
-        right: auto;
+        right: 150px;
     }
 
     .cid-ubtvYa8a88 .navbar .dropdown-menu .dropdown-toggle[data-toggle="dropdown-submenu"]:after {
@@ -1356,7 +1356,7 @@ a {
 }
 
 .cid-ubtvYa8a88 .navbar .dropdown.open>.dropdown-menu {
-    display: flex;
+    display: fixed;
 }
 
 .cid-ubtvYa8a88 ul.navbar-nav {
@@ -1486,7 +1486,7 @@ a {
 .cid-ubtvYa8a88 .navbar .dropdown>.dropdown-menu {
     display: none;
     width: max-content;
-    max-width: 500px !important;
+    max-width: 150px !important;
     transform: translateX(-50%);
     top: calc(100% + 20px);
     left: 50%;
@@ -1498,14 +1498,14 @@ a {
 
 .cid-ubtvYa8a88 .navbar .dropdown>.dropdown-menu .dropdown .dropdown-item {
     align-items: center;
-    display: flex;
+    display: fixed;
     height: max-content !important;
     min-height: max-content !important;
 }
 
 .cid-ubtvYa8a88 .navbar .dropdown>.dropdown-menu .dropdown .dropdown-item::after {
     display: inline-block;
-    position: static;
+    position: fixed;
     margin-left: 0.5rem;
     margin-top: 0;
     margin-right: 0;
@@ -1557,7 +1557,7 @@ a {
     }
 
     .cid-ubtvYa8a88 .navbar .dropdown>.dropdown-menu {
-        max-width: 100% !important;
+        max-width: 50% !important;
         transform: translateX(0);
         top: 10px;
         left: 0;
@@ -1574,14 +1574,14 @@ a {
 
     .cid-ubtvYa8a88 .navbar .dropdown>.dropdown-menu .dropdown .dropdown-item {
         align-items: center;
-        display: flex;
+        display: fixed;
         height: max-content !important;
         min-height: max-content !important;
     }
 
     .cid-ubtvYa8a88 .navbar .dropdown>.dropdown-menu .dropdown .dropdown-item::after {
         display: inline-block;
-        position: static;
+        position: fixed;
         margin-left: 0.5rem;
         margin-top: 0;
         margin-right: 0;
@@ -1595,9 +1595,9 @@ a {
     }
 
     .cid-ubtvYa8a88 .navbar .dropdown>.dropdown-menu .dropdown-submenu {
-        position: static;
-        width: 100%;
-        max-width: 100% !important;
+        position: fixed;
+        width: 50%;
+        max-width: 50% !important;
         transform: translateX(0) !important;
         top: 0;
         left: 0;
@@ -1607,7 +1607,7 @@ a {
     }
 
     .cid-ubtvYa8a88 .navbar .dropdown.open>.dropdown-menu {
-        display: flex !important;
+        display: fixed !important;
         flex-direction: column;
         align-items: flex-start;
     }

@@ -3907,7 +3907,7 @@ fieldset:disabled .btn {
 }
 
 .dropdown-menu {
-    position: absolute;
+    position: fixed;
     z-index: 1000;
     display: none;
     min-width: 10rem;
@@ -4497,7 +4497,7 @@ fieldset:disabled .btn {
 }
 
 .navbar-nav .dropdown-menu {
-    position: static
+    position: fixed
 }
 
 .navbar-text {
@@ -4506,7 +4506,7 @@ fieldset:disabled .btn {
 }
 
 .navbar-collapse {
-    flex-basis: 100%;
+    flex-basis: 50%;
     flex-grow: 1;
     align-items: center
 }
@@ -4596,7 +4596,7 @@ fieldset:disabled .btn {
     }
 
     .navbar-expand-md .navbar-nav .dropdown-menu {
-        position: absolute
+        position: fixed
     }
 
     .navbar-expand-md .navbar-nav .nav-link {
@@ -4608,8 +4608,8 @@ fieldset:disabled .btn {
         overflow: visible
     }
 
-    .navbar-expand-md .navbar-collapse {
-        display: flex !important;
+    .navbar-expand-md.navbar-collapse {
+        display: fixed !important;
         flex-basis: auto
     }
 
@@ -4727,7 +4727,7 @@ fieldset:disabled .btn {
 }
 
 .navbar-expand .navbar-nav .dropdown-menu {
-    position: absolute
+    position: fixed
 }
 
 .navbar-expand .navbar-nav .nav-link {
