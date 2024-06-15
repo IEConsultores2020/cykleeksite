@@ -39,7 +39,7 @@
     <link rel="stylesheet" href="assets\theme\css\style.css?rnd=1716071066321">
     <link rel="preload" href="https://fonts.googleapis.com/css2?family=Onest:wght@400;700&display=swap&display=swap"
         as="style" onload="this.onload=null;this.rel='stylesheet'">
-
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/3.1.0/css/flag-icon.min.css" rel="stylesheet">
     <link rel="stylesheet" href="assets\bootstrap\4.5.2\css\bootstrap.min.css">
     <style>
@@ -62,7 +62,7 @@
         <nav class="navbar navbar-dropdown navbar-header navbar-expand-lg display-8">
             <div class="container">
                 <span class="navbar-caption-wrap text-black">
-                    <ul class="navbar-nav">
+                    <ul class="navbar-nav ">
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle" href="#" id="dropdown09" data-toggle="dropdown"
                                 aria-haspopup="true" aria-expanded="false">
@@ -79,6 +79,11 @@
                                     onclick="changeLanguage('es', 'flag-icon-es', 'Español')">
                                     <span class="flag-icon flag-icon-es"> </span>
                                     Español
+                                </a>
+                                <a class="dropdown-item" href="#"
+                                    onclick="changeLanguage('fr', 'flag-icon-fr', 'French')">
+                                    <span class="flag-icon flag-icon-fr"> </span>
+                                    French
                                 </a>
                                 <a class="dropdown-item" href="#"
                                     onclick="changeLanguage('tr','flag-icon-tr', 'Türkiye')">
@@ -151,7 +156,7 @@
                         </li>
                         <li class="nav-item ">
                             <a href="#howdoesitworks" aria-expanded="false">
-                                <p class="nav-link link text-black display-4" data-i18n="HowDoesItWork"></p>
+                                <p class="nav-link link text-black display-4" data-i18n="HowDoesItWork."></p>
                             </a>
                         </li>
                         <li class="nav-item ">
@@ -619,7 +624,7 @@
                 <div class="col-12 col-lg-8">
                     <div class="item features-without-image col-12 active">
                         <div class="item-wrapper">
-                            <h2 class="mbr-card-title" data-i18n="Q1"></h2>
+                            <h2 class="mbr-card-title display-7" data-i18n="Q1"></h2>
                             <p class="mbr-text mbr-fonts-style mt-0 mb-3 display-7"><span id="dotsQ1">...</span><span
                                     id="moreQ1" data-i18n="A1">
                                 </span></p>
@@ -628,7 +633,7 @@
                     </div>
                     <div class="item features-without-image col-12">
                         <div class="item-wrapper">
-                            <h2 class="mbr-card-title" data-i18n="Q2"></h2>
+                            <h2 class="mbr-card-title display-7" data-i18n="Q2"></h2>
                             <p class="mbr-text mbr-fonts-style mt-0 mb-3 display-7"><span id="dotsQ2">...</span><span
                                     id="moreQ2" data-i18n="A2"></span></p>
                             <button onclick="seeAnswer('dotsQ2','moreQ2','BtnQ2')" id="BtnQ2">See
@@ -637,7 +642,7 @@
                     </div>
                     <div class="item features-without-image col-12">
                         <div class="item-wrapper">
-                            <h2 class="mbr-card-title" data-i18n="Q3"></h2>
+                            <h2 class="mbr-card-title display-7" data-i18n="Q3"></h2>
                             <p class="mbr-text mbr-fonts-style mt-0 mb-3 display-7"><span id="dotsQ3">...</span><span
                                     id="moreQ3" data-i18n="A3"></span></p>
                             <button onclick="seeAnswer('dotsQ3','moreQ3','BtnQ3')" id="BtnQ3">See Answer</button>
@@ -645,7 +650,7 @@
                     </div>
                     <div class="item features-without-image col-12">
                         <div class="item-wrapper">
-                            <h2 class="mbr-card-title" data-i18n="Q4"></h2>
+                            <h2 class="mbr-card-title display-7" data-i18n="Q4"></h2>
                             <p class="mbr-text mbr-fonts-style mt-0 mb-3 display-7"><span id="dotsQ4">...</span><span
                                     id="moreQ4" data-i18n="A4"></span></p>
                             <button onclick="seeAnswer('dotsQ4','moreQ4','BtnQ4')" id="BtnQ4">See Answer</button>
@@ -654,7 +659,7 @@
 
                     <div class="item features-without-image col-12">
                         <div class="item-wrapper">
-                            <h2 class="mbr-card-title" data-i18n="Q5"></h2>
+                            <h2 class="mbr-card-title display-7" data-i18n="Q5"></h2>
                             <p class="mbr-text mbr-fonts-style mt-0 mb-3 display-7"><span id="dotsQ5">...</span><span
                                     id="moreQ5" data-i18n="A5"></span></p>
                             <button onclick="seeAnswer('dotsQ5','moreQ5','BtnQ5')" id="BtnQ5">See
@@ -664,7 +669,7 @@
 
                     <div class="item features-without-image col-12">
                         <div class="item-wrapper">
-                            <h2 class="mbr-card-title" data-i18n="Q6"></h2>
+                            <h2 class="mbr-card-title display-7" data-i18n="Q6"></h2>
                             <p class="mbr-text mbr-fonts-style mt-0 mb-3 display-7"><span id="dotsQ6">...</span><span
                                     id="moreQ6" data-i18n="A6"></span></p>
                             <button onclick="seeAnswer('dotsQ6','moreQ6','BtnQ6')" id="BtnQ6">See
@@ -674,7 +679,7 @@
 
                     <div class="item features-without-image col-12">
                         <div class="item-wrapper">
-                            <h2 class="mbr-card-title" data-i18n="Q7"></h2>
+                            <h2 class="mbr-card-title display-7" data-i18n="Q7"></h2>
                             <p class="mbr-text mbr-fonts-style mt-0 mb-3 display-7"><span id="dotsQ7">...</span><span
                                     id="moreQ7" data-i18n="A7"></span></p>
                             <button onclick="seeAnswer('dotsQ7','moreQ7','BtnQ7')" id="BtnQ7">See
@@ -684,7 +689,7 @@
 
                     <div class="item features-without-image col-12">
                         <div class="item-wrapper">
-                            <h2 class="mbr-card-title" data-i18n="Q8"></h2>
+                            <h2 class="mbr-card-title display-7 " data-i18n="Q8"></h2>
                             <p class="mbr-text mbr-fonts-style mt-0 mb-3 display-7"><span id="dotsQ8">...</span><span
                                     id="moreQ8" data-i18n="A8"></span></p>
                             <button onclick="seeAnswer('dotsQ8','moreQ8','BtnQ8')" id="BtnQ8">See
