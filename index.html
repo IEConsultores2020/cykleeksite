@@ -11,6 +11,7 @@
     default-src 'self';
     script-src 'self' 'unsafe-inline' 'unsafe-eval' https://www.youtube.com https://stackpath.bootstrapcdn.com https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js https://code.jquery.com/jquery-3.1.1.slim.min.js;
     style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://r.mobirisesite.com https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/3.1.0/css/flag-icon.min.css https://code.jquery.com https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js https://stackpath.bootstrapcdn.com; 
+    
     img-src 'self' https://img.youtube.com/vi/gcE7gTicXvk/maxresdefault.jpg data: https://cdnjs.cloudflare.com;;
     font-src 'self' https://fonts.gstatic.com https://r.mobirisesite.com;
     media-src 'self'  https://fonts.gstatic.com https://r.mobirisesite.com;
@@ -42,6 +43,7 @@
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/3.1.0/css/flag-icon.min.css" rel="stylesheet">
     <link rel="stylesheet" href="assets\bootstrap\4.5.2\css\bootstrap.min.css">
+    <script defer src="/assets/js/script.js"></script>
     <style>
         .flag-icon {
             margin-right: 5px;
@@ -81,7 +83,7 @@
                                     Español
                                 </a>
                                 <a class="dropdown-item" href="#"
-                                    onclick="changeLanguage('fr', 'flag-icon-fr', 'French')">
+                                    onclick="changeLanguage('fr', 'flag-icon-fr', 'Français')">
                                     <span class="flag-icon flag-icon-fr"> </span>
                                     French
                                 </a>
@@ -191,7 +193,7 @@
                         </li>
                         <li class="nav-item ">
                             <a href="#joinus" aria-expanded="false">
-                                <p class="nav-link link text-black display-4" data-i18n="Joinus"></p>
+                                <p class="nav-link link text-black display-4" data-i18n="Join.."></p>
                             </a>
                         </li>
                     </ul>

@@ -19,12 +19,15 @@
         element.innerHTML = langData[key];
     }
     });
+
   }
 
   function changeLanguage( lang, flagClass, languageText) {
- 
+    localStorage.setItem('language', language);
+    localStorage.setItem('selectedLanguage', JSON.stringify({ language, flagClass, languageText }));
+
     // Prevent default behavior of anchor tag
-    Event.preventDefault();
+    //Event.preventDefault();
     // Update the flag and language text
     document.getElementById('selected-flag').className = `flag-icon ${flagClass}`;
     document.getElementById('selected-language').textContent = languageName;
@@ -39,36 +42,34 @@
     
     const langData = await fetchLanguageData(lang);
     updateContent(langData);
-
     //
-    toggleArabicStylesheet(lang);// Toggle Arabic stylesheet
+    //toggleArabicStylesheet(lang);// Toggle Arabic stylesheet
   }
+
+    // Call updateContent() on page load
+    window.addEventListener('DOMContentLoaded', async () => {
+      const userPreferredLanguage = localStorage.getItem('language') || 'en';
+      const langData = await fetchLanguageData(userPreferredLanguage);
+      updateContent(langData);
+      //toggleArabicStylesheet(userPreferredLanguage);
+    });
 
 // Function to toggle Arabic stylesheet based on language selection
-function toggleArabicStylesheet(lang) {
-    const head = document.querySelector('head');
-    const link = document.querySelector('#styles-link');
+// function toggleArabicStylesheet(lang) {
+//     const head = document.querySelector('head');
+//     const link = document.querySelector('#styles-link');
   
-    if (link) {
-      head.removeChild(link); // Remove the old stylesheet link
-    }
-    else if (lang === 'ar') {
-        const newLink = document.createElement('link');
-        newLink.id = 'styles-link';
-        newLink.rel = 'stylesheet';
-        newLink.href = './assets/css/style-ar.css'; // Path to Arabic stylesheet
-        head.appendChild(newLink);
-      }
-  }
-  
-  
-  // Call updateContent() on page load
-  window.addEventListener('DOMContentLoaded', async () => {
-    const userPreferredLanguage = localStorage.getItem('language') || 'en';
-    const langData = await fetchLanguageData(userPreferredLanguage);
-    updateContent(langData);
-    toggleArabicStylesheet(userPreferredLanguage);
-  });
+//     if (link) {
+//       head.removeChild(link); // Remove the old stylesheet link
+//     }
+//     else if (lang === 'ar') {
+//         const newLink = document.createElement('link');
+//         newLink.id = 'styles-link';
+//         newLink.rel = 'stylesheet';
+//         newLink.href = './assets/css/style-ar.css'; // Path to Arabic stylesheet
+//         head.appendChild(newLink);
+//       }
+//   }
   
 
 // let enData, arData; // Define variables to hold language data
