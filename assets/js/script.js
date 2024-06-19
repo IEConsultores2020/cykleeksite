@@ -8,6 +8,7 @@
   function setLanguagePreference(lang) {
     localStorage.setItem('language', lang);
     location.reload();
+
   }
   
   // Function to update content based on selected language
@@ -25,23 +26,22 @@
   function changeLanguage( lang, flagClass, languageText) {
     localStorage.setItem('language', language);
     localStorage.setItem('selectedLanguage', JSON.stringify({ language, flagClass, languageText }));
-
+    console.log(`Changing Language to: ${lang}`);
     // Prevent default behavior of anchor tag
     //Event.preventDefault();
     // Update the flag and language text
     document.getElementById('selected-flag').className = `flag-icon ${flagClass}`;
+    document.getElementById('fix-selected-flag').className = `flag-icon ${flagClass}`;
     document.getElementById('selected-language').textContent = languageName;
 
-    // Optional: Perform additional actions, like changing the page language
-    console.log(`Language changed to: ${languageName}`);
   }
   
   // Function to change language
   async function changeLanguage(lang) {
     await setLanguagePreference(lang);
     
-    const langData = await fetchLanguageData(lang);
-    updateContent(langData);
+   // const langData = await fetchLanguageData(lang);
+    //updateContent(langData);
     //
     //toggleArabicStylesheet(lang);// Toggle Arabic stylesheet
   }
@@ -49,11 +49,25 @@
     // Call updateContent() on page load
     window.addEventListener('DOMContentLoaded', async () => {
       const userPreferredLanguage = localStorage.getItem('language') || 'en';
+      //const selectedLanguage = JSON.parse(localStorage.getItem('selectedLanguage'));
       const langData = await fetchLanguageData(userPreferredLanguage);
       updateContent(langData);
+
+      if (userPreferredLanguage) {
+          //const dropdown = document.getElementById('dropdownList');
+          //dropdown.value = savedValue;
+          if ( userPreferredLanguage == 'en' ) {
+            userPreferredLanguage = 'gb'
+          }
+          document.getElementById('selected-flag').className = `flag-icon flag-icon-${userPreferredLanguage}`;
+      }
+
+      console.log(`userPreferredLanguage: ${userPreferredLanguage}`);
+      
+      
       //toggleArabicStylesheet(userPreferredLanguage);
     });
-
+    
 // Function to toggle Arabic stylesheet based on language selection
 // function toggleArabicStylesheet(lang) {
 //     const head = document.querySelector('head');

@@ -71,4 +71,5 @@
             e.preventDefault(), e.target.parentNode.classList.toggle("open")
         }))
     }))
+    console.log("Script dropdown Finished");
 }();
