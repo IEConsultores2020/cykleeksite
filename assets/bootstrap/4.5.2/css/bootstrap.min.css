@@ -4888,7 +4888,7 @@ input[type=submit].btn-block {
     }
 
     .navbar-expand-sm .navbar-toggler {
-        display: none
+        display: none;
     }
 }
 

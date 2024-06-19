@@ -261,7 +261,7 @@
 }
 
 .nav-dropdown-sm .nav-item {
-    display: block;
+    display: flex;
     margin-left: 0 !important;
     padding-left: 0;
 }
