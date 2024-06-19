@@ -60,6 +60,7 @@
             userPreferredLanguage = 'gb'
           }
           document.getElementById('selected-flag').className = `flag-icon flag-icon-${userPreferredLanguage}`;
+          document.getElementById('fix-selected-flag').className = `flag-icon flag-icon-${userPreferredLanguage}`;
       }
 
       console.log(`userPreferredLanguage: ${userPreferredLanguage}`);
