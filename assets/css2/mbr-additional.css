@@ -1487,7 +1487,7 @@ a {
     width: max-content;
     max-width: 500px !important;
     transform: translateX(-50%);
-    top: calc(100% + 20px);
+    top: calc(50% + 10px);
     left: 50%;
 }
 
