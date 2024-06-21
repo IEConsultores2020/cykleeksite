@@ -1114,6 +1114,7 @@ a {
 @media (max-width: 1166px) {
     .cid-ubtvYa8a88 .container {
         padding-right: 2rem;
+
     }
 }
 
@@ -1295,7 +1296,7 @@ a {
         border-right: 0.35em solid transparent;
         border-left: 0.35em solid transparent;
         border-bottom: 0;
-        top: 40%;
+        top: 50%;
     }
 
     .cid-ubtvYa8a88 .navbar .dropdown-menu .dropdown-item {
@@ -1562,7 +1563,8 @@ a {
         left: 0;
         padding: 8px !important;
         border-radius: 1rem;
-        background-color: rgba(27, 31, 10, 0.04) !important;
+        background-color: rgba(187, 226, 13, 0.04) !important;
+        background: #eee6e6 !important;
     }
 
     .cid-ubtvYa8a88 .navbar .dropdown>.dropdown-menu .dropdown-item {
