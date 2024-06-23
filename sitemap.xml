@@ -21,33 +21,39 @@
         <priority>0.5</priority>
     </url>    
     <url>
+        <loc>https://cykleek.com/Şartlar_koşullar.html</loc>
+        <lastmod>2024-06-12</lastmod>
+        <changefreq>always</changefreq>
+        <priority>0.5</priority>
+    </url>        
+    <url>
         <loc>https://cykleek.com/formulary.html</loc>
         <lastmod>2024-06-12</lastmod>
         <changefreq>always</changefreq>
         <priority>0.5</priority>
     </url>        
     <url>
-        <loc>http://cykleek.com:3000/users/sign_in?locale=en</loc>
+        <loc>https://cykleek.com/index.html</loc>
+        <lastmod>2024-06-12</lastmod>
+        <changefreq>always</changefreq>
+        <priority>0.5</priority>
+    </url>          
+    <url>
+        <loc>http://cykleek.com:3000/locale=en</loc>
         <lastmod>2024-06-12</lastmod>
         <changefreq>always</changefreq>
         <priority>0.5</priority>
     </url>
     <url>
-        <loc>http://cykleek.com:3000/users/sign_up?locale=en</loc>
+        <loc>http://cykleek.com:3000/locale=es</loc>
         <lastmod>2024-06-12</lastmod>
         <changefreq>always</changefreq>
         <priority>0.5</priority>
     </url>
     <url>
-        <loc>http://cykleek.com:3000/users/password/new?locale=en</loc>
+        <loc>http://cykleek.com:3000/locale=tr</loc>
         <lastmod>2024-06-12</lastmod>
         <changefreq>always</changefreq>
         <priority>0.5</priority>
-    </url>
-    <url>
-        <loc>http://cykleek.com:3000/terms_of_services?locale=en</loc>
-        <lastmod>2024-06-12</lastmod>
-        <changefreq>always</changefreq>
-        <priority>0.5</priority>
-    </url>
+    </url>    
 </urlset>
