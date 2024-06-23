@@ -1484,11 +1484,11 @@ a {
 }
 
 .cid-ubtvYa8a88 .navbar .dropdown>.dropdown-menu {
-    display: none;
+    display: absolute;
     width: max-content;
     max-width: 500px !important;
     transform: translateX(-50%);
-    top: calc(50% + 20px);
+    top: calc(50% + 10px);
     left: 50%;
 }
 
