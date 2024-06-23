@@ -27,7 +27,7 @@
         if (!('CSS' in window) || !CSS.supports('color', 'var(--color-var)')) { var cfStyle = document.getElementById('codyframe'); if (cfStyle) { var href = cfStyle.getAttribute('href'); href = href.replace('style.css', 'style-fallback.css'); cfStyle.setAttribute('href', href); } document.getElementsByTagName("html")[0].className += " ie"; }
     </script>
     <script src="https://madewithtailwindcss.com/themes/madewithtailwindcss/assets/js/dark-mode.js"></script>
-
+    <script defer src="/assets/js/script.js"></script>
 </head>
 
 <body>
@@ -44,133 +44,141 @@
 
     <section class="padding-y-lg">
         <div class="max-w-3xl mx-auto bg-white p-8 rounded-lg shadow-lg">
-            <h1 class="text-2xl font-bold mb-6">CAMPAIGNS FORMULARY</h1>
+            <h1 class="text-2xl font-bold mb-6">
+                <p data-i18n="campaignsformulary"></p>
+            </h1>
             <form>
                 <div class="mb-4">
-                    <label for="campaignName" class="block text-gray-700 font-bold mb-2">What is the name of the
-                        campaign you want to announce in Cykleek?</label>
+                    <label for="campaignName" class="block text-gray-700 font-bold mb-2">
+                        <p data-i18n="whatsisname"></p>
+                    </label>
                     <input type="text" id="campaignName" name="campaignName"
                         class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline">
                 </div>
                 <div class="mb-4">
-                    <label class="block text-gray-700 font-bold mb-2">What is the best option(s) that describe(s) the
-                        type of campaign you want to announce in Cykleek (mark up to three options):</label>
+                    <label class="block text-gray-700 font-bold mb-2">
+                        <p data-i18n="whatisthebest"></p>
+                    </label>
                     <div class="space-y-2">
                         <label class="block">
                             <input type="checkbox" class="mr-2 leading-tight">
-                            Practical action-Oriented (e.g. plastics clean up, river/stream restorations)
+                            <span data-i18n="whatispractical"></span>
                         </label>
                         <label class="block">
                             <input type="checkbox" class="mr-2 leading-tight">
-                            Awareness (e.g. demonstrations, marches)
+                            <span data-i18n="whatisawarness"></span>
                         </label>
                         <label class="block">
                             <input type="checkbox" class="mr-2 leading-tight">
-                            Rights defence (advocacy acts, meetings, press conferences)
+                            <span data-i18n="whatisrights"></span>
                         </label>
                         <label class="block">
                             <input type="checkbox" class="mr-2 leading-tight">
-                            Animal/Ecosystem protection
+                            <span data-i18n="whatisanimal"></span>
                         </label>
                         <label class="block">
                             <input type="checkbox" class="mr-2 leading-tight">
-                            Tree planting
+                            <span data-i18n="whatistree"></span>
                         </label>
                         <label class="block">
                             <input type="checkbox" class="mr-2 leading-tight">
-                            Waste (e.g. recycling, reduction, segregation)
+                            <span data-i18n="whatiswaste"></span>
                         </label>
                         <label class="block">
                             <input type="checkbox" class="mr-2 leading-tight">
-                            Mobility (e.g. cycling events)
+                            <span data-i18n="whatismobility"></span>
                         </label>
                         <label class="block">
                             <input type="checkbox" class="mr-2 leading-tight">
-                            Environmental Education in Schools
+                            <span data-i18n="whatisenvironmental"></span>
                         </label>
                         <label class="block">
                             <input type="checkbox" class="mr-2 leading-tight">
-                            Seminaries, Conferences
+                            <span data-i18n="whatisseminares"></span>
                         </label>
                         <label class="block">
                             <input type="checkbox" class="mr-2 leading-tight">
-                            Arts/culture (e.g. exhibitions, concerts, contests, flashmobs, theatre)
+                            <span data-i18n="whatisarts"></span>
                         </label>
                         <label class="block">
                             <input type="checkbox" class="mr-2 leading-tight">
-                            Food (e.g. composting, postharvest)
+                            <span data-i18n="whatisfood"></span>
                         </label>
                         <label class="block">
                             <input type="checkbox" class="mr-2 leading-tight">
-                            Institutional (e.g. introduction or promotion of rules, regulations)
+                            <span data-i18n="whatisinstitutional"></span>
                         </label>
                         <label class="block">
                             <input type="checkbox" class="mr-2 leading-tight">
-                            Other (specify):
+                            <span data-i18n="whatisothers"></span>
                         </label>
                     </div>
                 </div>
                 <div class="mb-4">
-                    <label class="block text-gray-700 font-bold mb-2">Is permission (in case it is requested) granted to
-                        conduct the campaign?</label>
+                    <label class="block text-gray-700 font-bold mb-2">
+                        <p data-i18n="ispermission"></p>
+                    </label>
                     <div class="space-y-2">
                         <label class="block">
                             <input type="radio" name="permission" value="yes" class="mr-2 leading-tight">
-                            YES
+                            <span data-i18n="ispermissionyes"></span>
                         </label>
                         <label class="block">
                             <input type="radio" name="permission" value="no" class="mr-2 leading-tight">
-                            NO
+                            <span data-i18n="ispermissionno"></span>
                         </label>
                         <label class="block">
                             <input type="radio" name="permission" value="na" class="mr-2 leading-tight">
-                            N/A
+                            <span data-i18n="ispermissionna"></span>
                         </label>
                     </div>
                 </div>
                 <div class="mb-4">
-                    <label class="block text-gray-700 font-bold mb-2">How many persons are expected to attend (for
-                        practical action-oriented) or reached by the campaign?</label>
+                    <label class="block text-gray-700 font-bold mb-2">
+                        <p data-i18n="howmanypersons"></p>
+                    </label>
                     <div class="space-y-2">
                         <label class="block">
                             <input type="radio" name="attendance" value="upTo100" class="mr-2 leading-tight">
-                            Up to 100
+                            <span data-i18n="howmanypersons100"></span>
                         </label>
                         <label class="block">
                             <input type="radio" name="attendance" value="100-500" class="mr-2 leading-tight">
-                            Between 100-500
+                            <span data-i18n="howmanypersons500"></span>
                         </label>
                         <label class="block">
                             <input type="radio" name="attendance" value="500-1000" class="mr-2 leading-tight">
-                            Between 500-1000
+                            <span data-i18n="howmanypersons1000"></span>
                         </label>
                         <label class="block">
                             <input type="radio" name="attendance" value="1000-5000" class="mr-2 leading-tight">
-                            Between 1000-5000
+                            <span data-i18n="howmanypersons1000"></span>
                         </label>
                         <label class="block">
                             <input type="radio" name="attendance" value="moreThan5000" class="mr-2 leading-tight">
-                            More than 5000
+                            <span data-i18n="howmanypersons500"></span>
                         </label>
                     </div>
                 </div>
                 <div class="mb-4">
-                    <label class="block text-gray-700 font-bold mb-2">Does the campaign have a website or social media
-                        space?</label>
+                    <label class="block text-gray-700 font-bold mb-2">
+                        <p data-i18n="doesthecampaing"></p>
+                    </label>
                     <div class="space-y-2">
                         <label class="block">
                             <input type="radio" name="website" value="yes" class="mr-2 leading-tight">
-                            YES
+                            <span data-i18n="doesthecampaingyes"></span>
                         </label>
                         <label class="block">
                             <input type="radio" name="website" value="no" class="mr-2 leading-tight">
-                            NO
+                            <span data-i18n="doesthecampaingno"></span>
                         </label>
                     </div>
                 </div>
                 <div class="mb-4">
-                    <label for="link" class="block text-gray-700 font-bold mb-2">In case the previous answer is YES
-                        kindly provide the corresponding link(s):</label>
+                    <label for="link" class="block text-gray-700 font-bold mb-2">
+                        <p data-i18n="doesthepreviousyes"></p>
+                    </label>
                     <input type="text" id="link" name="link"
                         class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline">
                 </div>
@@ -185,8 +193,6 @@
     </section> <!-- Footer -->
     <!-- Newsletter -->
     <!-- newsletter -->
-
-
 </body>
 
 </html>
