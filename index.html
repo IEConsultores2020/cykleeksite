@@ -882,7 +882,7 @@
                 }
 
 
-
+                tel = tel.replace(/\s/g, "")
                 // Validate telephone
                 if (!validateTel(tel)) {
                     document.getElementById('tel-error').innerText = 'Invalid tel number: [+][country code][mobile number]';
