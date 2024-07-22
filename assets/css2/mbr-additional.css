@@ -717,6 +717,7 @@ a[class*="text-"]:not(.nav-link):not(.dropdown-item):not([role]):not(.navbar-cap
     color: #232323;
 }
 
+
 .alert-success {
     background-color: #70c770;
 }

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Sending Mail</title>
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+    </script>
+    <script type="text/javascript">
+        (function () {
+            emailjs.init({
+                publicKey: "x2oeZYXfKZB0O0QHr",
+            });
+        })();
+    </script>
+    <script type="text/javascript">
+        function sendEmailJS() {
+            console.log("Ingress to sendEmail on pruebocorreo");
+            emailjs.sendForm('service_contact_EmailJS', 'template_joinus', '#contact_form').then(
+                (response) => {
+                    console.log('SUCCESS!', response.status, response.text);
+                },
+                (error) => {
+                    console.log('FAILED...', error);
+                },
+            );
+        };
+    </script>
+</head>
+
+<body>
+    <form id="contact_form" method="post">
+        <input type="button" value="Send Mail" onclick="sendEmailJS()" />
+    </form>
+</body>
+
+</html>

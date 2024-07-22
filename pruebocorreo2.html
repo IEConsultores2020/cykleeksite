@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <title>Sending Mail</title>
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+    </script>
+    <script type="text/javascript">
+        (function () {
+            emailjs.init({
+                publicKey: "x2oeZYXfKZB0O0QHr",
+            });
+        })();
+    </script>
+    <script type="text/javascript">
+        function sendEmail() {
+            console.log("Ingress to sendEmail on pruebocorreo");
+            emailjs.sendForm('service_contact_EmailJS', 'template_joinus', '#contact_form').then(
+                (response) => {
+                    console.log('SUCCESS!', response.status, response.text);
+                },
+                (error) => {
+                    console.log('FAILED...', error);
+                },
+            );
+        };
+    </script>
+</head>
+
+<body>
+    <form id="contact_form" method="post">
+        <br />
+        <div class="col-md col-sm-12 form-group mb-3" data-for="name">
+            <input type="text" name="name" placeholder="Name" data-form-field="name" class="form-control" value=""
+                id="name">
+        </div>
+        <div class="col-md col-sm-12 form-group mb-3" data-for="email">
+            <input type="email" name="email" placeholder="Email" data-form-field="email" class="form-control" value=""
+                id="email">
+        </div>
+        <div class="col-12 form-group mb-3 mb-3" data-for="url">
+            <input type="tel" name="tel" placeholder="[+][country code][area code][local phone number]"
+                data-form-field="[+][country code][area code][local phone number]" class="form-control" value=""
+                id="url-contact">
+        </div>
+        <div class="col-12 form-group mb-3 display-8" data-for="textarea">
+            <textarea name="message" placeholder="Message" id="message" data-form-field="textarea" class="form-control"
+                id="textarea-contact-form-3-ubtvYaesB1"></textarea>
+        </div>
+        <input type="button" value="Send Mail" onclick="sendEmail()" />
+    </form>
+</body>
+
+</html>

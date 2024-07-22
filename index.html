@@ -17,8 +17,9 @@
     <title data-i18n="title"></title>
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta http-equiv="Content-Security-Policy" content="
-    default-src 'self'; connect-src 'self' https://formoid.net;
-    script-src 'self' 'unsafe-inline' 'unsafe-eval' https://www.youtube.com https://stackpath.bootstrapcdn.com  https://code.jquery.com/jquery-3.1.1.slim.min.js https://code.jquery.com https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js;
+    connect-src 'self' https://api.emailjs.com;
+    default-src 'self'; 
+    script-src 'self' 'unsafe-inline' 'unsafe-eval' https://www.youtube.com https://stackpath.bootstrapcdn.com  https://code.jquery.com/jquery-3.1.1.slim.min.js https://code.jquery.com https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js https://www.gstatic.com  https://smtpjs.com/v3/smtp.js https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js;
     style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://r.mobirisesite.com https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/3.1.0/css/flag-icon.min.css https://code.jquery.com https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js https://stackpath.bootstrapcdn.com; 
     
     img-src 'self' https://img.youtube.com/vi/gcE7gTicXvk/maxresdefault.jpg data: https://cdnjs.cloudflare.com;;
@@ -743,7 +744,8 @@
         </div>
     </section>
 
-    <section data-bs-version="5.1" class="form5 cid-ubtvYaesB1" id="joinus">
+
+    <section data-bs-version="5.1" class="cid-ubtvYaesB1" id="joinus">
         <div class="container">
             <div class="row justify-content-center">
                 <div class="col-12 content-head">
@@ -758,9 +760,9 @@
             </div>
             <div class="row justify-content-center">
                 <div class="col-lg-8 mx-auto mbr-form" data-form-type="formoid">
-                    <form action="send_email.php" method="POST" class="mbr-form form-with-styler"
-                        data-form-title="Form Name"><input type="hidden" name="email" data-form-email="true"
-                            value="Q/mTCy/r/WEIH8Zcxn0Gk0gZgW5zbb36fMgPQrr8LJxBHd3Y605NJWJnd+nkgPkA+0L7clSngxReQHbKchBd1G1UZAMn2ZamKV3ZFRJ6jMOmwATiQkx0fXtEKP/l3+bp">
+                    <form id="contact_form" method="POST">
+                        <div class="g-recaptcha" data-sitekey=""></div>
+                        <br />
                         <div class="row">
                             <div hidden="hidden" data-form-alert="" class="alert alert-success col-12"
                                 data-i18n="ThanksForFillingOutform">
@@ -771,29 +773,32 @@
                                 Oops...! some problem!
                             </div>
                         </div>
-                        <div class="dragArea row">
-                            <div class="col-md col-sm-12 form-group mb-3" data-for="name">
-                                <input type="text" name="name" placeholder="Name" data-form-field="name"
-                                    class="form-control" value="" id="name">
-                            </div>
-                            <div class="col-md col-sm-12 form-group mb-3" data-for="email">
-                                <input type="email" name="email" placeholder="Email" data-form-field="email"
-                                    class="form-control" value="" id="email">
-                            </div>
-                            <div class="col-12 form-group mb-3 mb-3" data-for="url">
-                                <input type="tel" name="tel"
-                                    placeholder="[+][country code][area code][local phone number]"
-                                    data-form-field="[+][country code][area code][local phone number]"
-                                    class="form-control" value="" id="url-contact">
-                            </div>
-                            <div class="col-12 form-group mb-3 display-8" data-for="textarea">
-                                <textarea name="message" placeholder="Message" id="message" data-form-field="textarea"
-                                    class="form-control" id="textarea-contact-form-3-ubtvYaesB1"></textarea>
-                            </div>
-                            <div class="col-lg-12 col-md-12 col-sm-12 align-center mbr-section-btn">
-                                <button type="submit" class="btn btn-primary display-7">Send</button>
-                            </div>
+                        <div class="col-md col-sm-12 form-group mb-3" data-for="name">
+                            <input type="text" name="name" placeholder="Name" data-form-field="Name"
+                                class="form-control" value="" id="name">
+                            <div id="name-error" class="error" style="color: rgb(200, 231, 21);"></div>
                         </div>
+                        <div class="col-md col-sm-12 form-group mb-3" data-for="email">
+                            <input type="email" name="email" required placeholder="Email" data-form-field="Email"
+                                class="form-control" value="" id="email">
+                            <div id="email-error" class="error" style="color: rgb(200, 231, 21);"></div>
+                        </div>
+                        <div class="col-12 form-group mb-3 mb-3" data-for="url">
+                            <input type="tel" name="tel" placeholder="[+][country code][mobile number]"
+                                data-form-field="[+][country code][mobile number]" class="form-control" value=""
+                                id="tel">
+                            <div id="tel-error" class="error" style="color: rgb(200, 231, 21);"></div>
+                        </div>
+                        <div class="col-12 form-group mb-3 display-8" data-for="textarea">
+                            <textarea name="message" placeholder="Message" id="message" data-form-field="textarea"
+                                class="form-control" id="textarea-contact-form-3-ubtvYaesB1"></textarea>
+                            <div id="message-error" class="error" style="color: rgb(200, 231, 21);"></div>
+                        </div>
+                        <div class="col-lg-12 col-md-12 col-sm-12 align-center mbr-section-btn">
+                            <button type="button" class="btn btn-primary display-7"
+                                onclick="sendEmailJS()">Send</button>
+                        </div>
+
                     </form>
                 </div>
             </div>
@@ -815,6 +820,125 @@
         <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" crossorigin="anonymous"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.bundle.min.js"></script>
+
+        <title>Sending Mail</title>
+        <script src="https://smtpjs.com/v3/smtp.js"></script>
+        <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+        </script>
+        <script type="text/javascript">
+            (function () {
+                emailjs.init({
+                    publicKey: "x2oeZYXfKZB0O0QHr",
+                });
+            })();
+        </script>
+        <script type="text/javascript">
+            function showAlert(message, type) {
+                var alert = document.querySelector('.alert-' + type);
+                alert.innerText = message;
+                alert.style.display = 'block';
+            }
+
+            function hideAlert() {
+                document.querySelectorAll('.alert').forEach(function (alert) {
+                    alert.style.display = 'none';
+                });
+            }
+
+            function validateEmail(email) {
+                var emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+                return emailRegex.test(email);
+            }
+
+            function validateTel(tel) {
+                var telRegex = /^\+\d{1,3}\d{1,15}$/;
+                return telRegex.test(tel);
+            }
+
+            function sendEmailJS() {
+                hideAlert(); // Clear previous alerts
+
+                var name = document.getElementById('name').value;
+                var email = document.getElementById('email').value;
+                var tel = document.getElementById('tel').value;
+                var message = document.getElementById('message').value;
+                var valid = true;
+
+                // Validate name
+                if (name.length < 5) {
+                    document.getElementById('name-error').innerText = 'Enter a name with a minimum five (5) chars'
+                    valid = false;
+                } else {
+                    document.getElementById('name-error').innerText = '';
+                }
+
+
+                // Validate email
+                if (!validateEmail(email)) {
+                    document.getElementById('email-error').innerText = 'Invalid email address user@namedomain.com (.org, .net, .co ...)';
+                    valid = false;
+                } else {
+                    document.getElementById('email-error').innerText = '';
+                }
+
+
+
+                // Validate telephone
+                if (!validateTel(tel)) {
+                    document.getElementById('tel-error').innerText = 'Invalid tel number: [+][country code][mobile number]';
+                    valid = false;
+                } else {
+                    document.getElementById('tel-error').innerText = '';
+                }
+
+                // Validate message
+                if (message.length < 20) {
+                    document.getElementById('message-error').innerText = 'Enter a message with a  minimum 20 chars.'
+                    valid = false;
+                } else {
+                    document.getElementById('message-error').innerText = '';
+                }
+
+
+                if (!valid) {
+                    showAlert('Please correct the errors in the form.', 'danger');
+                    return;
+                }
+
+                // If validation passes, proceed with form submission
+                var formData = new FormData(document.getElementById('contact_form'));
+                var payload = {
+                    name: formData.get('name'),
+                    email: formData.get('email'),
+                    tel: formData.get('tel'),
+                    message: formData.get('message')
+                };
+
+                emailjs.sendForm('service_contact_EmailJS', 'template_joinus', '#contact_form').then(
+                    (response) => {
+                        console.log('SUCCESS!', response.status, response.text);
+                        var successAlert = document.querySelector('[data-form-alert]');
+                        var dangerAlert = document.querySelector('[data-form-alert-danger]');
+                        successAlert.style.display = 'block';
+                        successAlert.removeAttribute('hidden');
+                        dangerAlert.style.display = 'none';
+                        successAlert.innerText = 'Thanks for filling out the form!';
+                        document.getElementById('contact_form').reset();
+                    },
+                    (error) => {
+                        console.log('FAILED...', error);
+                        var successAlert = document.querySelector('[data-form-alert]');
+                        var dangerAlert = document.querySelector('[data-form-alert-danger]');
+                        dangerAlert.style.display = 'block';
+                        dangerAlert.removeAttribute('hidden');
+                        successAlert.style.display = 'none';
+                        dangerAlert.innerText = 'Oops...! Some problem!';
+                    },
+                );
+            };
+        </script>
+
+
     </section>
 </body>
 
