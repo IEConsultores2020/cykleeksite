@@ -1017,7 +1017,7 @@ a {
 }
 
 .cid-ubtvYa8a88 .navbar-nav .nav-item .nav-link {
-    padding: 5px !important;
+    padding: 15px !important;
     margin: 0 !important;
     border-radius: 1rem !important;
     transition: 0.3s all !important;
@@ -1536,7 +1536,7 @@ a {
     }
 
     .cid-ubtvYa8a88 .navbar-collapse {
-        z-index: -1 !important;
+        z-index: 100 !important;
         position: absolute;
         top: 110%;
         left: 0;
